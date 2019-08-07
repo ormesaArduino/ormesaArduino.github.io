@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="StyleSheet.css">
+</head>
+<title> Interactive Lesson 2 </title>
+<body>
+    <div class = "title">
+      <div class = "container">
+        <img src = "Mesa Logo White.svg" height = "50px">
+        <button onclick="window.location.href = 'MESA Main Site.html';" class = "btn"> </button>
+      </div>
+      <h1> MESA Arduino Help </h1>
+      <ul>
+        <li class=  "dropdown">
+          <a href=  "MESA Main Site.html" class="dropbtn"> Home </a>
+        </li>
+          <li class=  "dropdown">
+        <a href=  "javascript:void(0)" class="dropbtn">Interactive Lessons</a>
+        <div class= "dropdown-content">
+          <a href = "Interactive Lesson 1.html">Interactive Lesson 1: Blink</a>
+          <a href = "Interactive Lesson 2.html">Interactive Lesson 2: Sensors</a>
+        </div>
+      </li>
+        <li class=  "dropdown">
+      <a href=  "javascript:void(0)" class="dropbtn">Advanced Lessons</a>
+      <div class= "dropdown-content">
+        <a href = "Libraries.html">Advanced: Libraries</a>
+        <a href = "Functions.html"> Advanced: Functions </a>
+        <a href = "PWM.html"> Advanced: PWM </a>
+      </div>
+    </li>
+    <li class=  "dropdown">
+  <a href=  "javascript:void(0)" class="dropbtn">Component Guides</a>
+  <div class= "dropdown-content">
+  </div>
+  </li>
+    </ul>
+  </div>
+  <div class = "text">
+  <h2>Arduino Interactive Lesson 2: Sensors </h2>
+  <p> Sensors can ‘sense’ by changing the amount of power that flows through them. The Arduino then reads the amount of power going through the circuit.  Let’s explore how this works. </p>
+  <h3>Analog vs. Digital </h3>
+  <p>There are two types of pins on the Arduino, digital (pins 0-13) and analog (pins A0-A5). Imagine a light switch: it can be turned either on or off. Digital pins work the same way. They can be turned either on or off within your code, but not in between. They can also be used with sensors that only have two choices (pressed/not pressed, activated/not activated, etc.), like a button or switch. Now imagine a light dimmer: as you move the dimmer, the lights can get brighter or darker. Analog pins can take in data from sensors that can have many different states. We can use these to take data that read on a scale, like a photoresistor (light sensor) or flex sensor. </p>
+  <h3> Activity 1: Potentiometer </h3>
+  <h4> Materials Needed: </h4>
+<div class="gallery">
+  <a target="_blank" href="Images/Redboard.jpg">
+    <img src="Images/Redboard.jpg" width="200" height="200">
+  </a>
+  <div class="desc">Arduino board</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="Images/Breadboard.jpg">
+  <img src="Images/Breadboard.jpg" width="200" height="200">
+  </a>
+  <div class="desc">1 breadboard</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="Images/Potentiometer.jpg">
+    <img src="Images/Potentiometer.jpg" width="200" height="200">
+  </a>
+  <div class="desc"> 1 Potentiometer</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="Images/Wires.jpg">
+    <img src="Images/Wires.jpg" width="200" height="200">
+  </a>
+  <div class="desc"> 3 wires </div>
+</div>
+<p style="clear:both;">
+
+<h4> Circuit </h4>
+<p>To connect the potentiometer to the Arduino, connect the 5V and GND Arduino pins to the side pins on the sensor (it doesn’t matter which side is 5V and which side is GND) and A0 on the Arduino to the middle pin on the sensor (see images below). Most sensors that have three pins can be connected exactly like this. </p>
+
+<img src = "Images/PotentiometerCircuit.png" class = "img2" width = "339" height = "230">
+<img src = "Images/PotentiometerCircuitDigital.png" class = "img2" width = "357.3" height = "230">
+<p style="clear:both;"
+
+<div class = "text">
+<h4> Potentiometer Code </h4>
+<p>Now enter the following code into the Arduino IDE and upload it: </p>
+<p class = "console">
+int reading = 0; <br> <br>
+<span class = "console-blue">void </span>
+  setup(){ <br>
+  &emsp;Serial.begin(9600); <br>
+  &emsp;Serial.println("MESA Rocks!"); <br>
+} <br> <br>
+<span class = "console-blue"> void </span>
+loop(){ <br>
+  &emsp;reading = analogRead(A0); <br>
+  &emsp;Serial.println(reading); <br>
+}
+</p>
+<h4> Explore the Code </h4>
+<ol class = "a">
+  <img src = "Images/Serial-Monitor.png" class = "img1" height = 60>
+  <li> Click on the magnifying glass icon in the Arduino IDE. Turn the potentiometer and look at the values on the screen. What is going on? <br> <br> </li>
+  <li> Push the reset button and look at the screen to see the “MESA Rocks!” message. Why does this message only appear once? <br> <br> </li>
+  <li> Leave comments on the code (remember, //) explaining each line. If you have questions about functions, ask your advisor or mentor for clarification. </li>
+</ol>
+<h3> Activity 2: Photoresistor </h3>
+<p> Now we are going to replace the potentiometer with a photoresistor (a light sensor) and a 10K resistor. </p>
+<div class="gallery">
+  <a target="_blank" href="Images/Redboard.jpg">
+    <img src="Images/Redboard.jpg" width="200" height="200">
+  </a>
+  <div class="desc">Arduino board</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="Images/Breadboard.jpg">
+  <img src="Images/Breadboard.jpg" width="200" height="200">
+  </a>
+  <div class="desc">1 breadboard</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="Images/10kResistor.jpg">
+    <img src="Images/10kResistor.jpg" width="200" height="200">
+  </a>
+  <div class="desc"> 1 10k ohm resistor</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="Images/Wires.jpg">
+    <img src="Images/Wires.jpg" width="200" height="200">
+  </a>
+  <div class="desc"> 5 wires </div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="Images/Photoresistor.jpg">
+    <img src="Images/Photoresistor.jpg" width="200" height="200">
+  </a>
+  <div class="desc"> 1 Photoresistor </div>
+</div>
+<p style="clear:both;">
+
+<h4> Circuit </h4>
+
+<img src = "Images/PhotoresistorCircuit.png" class = "img2" width = "339" height = "230">
+<img src = "Images/PhotoresistorCircuitDigital.png" class = "img2" width = "339" height = "230">
+
+<p style="clear:both;">
+
+<p>Notice that the code doesn’t change. Also note that the wire to A0, one wire from the sensor, and one wire from the resistor are all connected.  Move your hand over the sensor. How do the values change? Try switching the resistor and the sensor.  How does that change the values? </p>
+<h4> Code </h4>
+<p> (This is exactly the same as the code above.) </p>
+<p class = "console">
+int reading = 0; <br> <br>
+<span class = "console-blue">void </span>
+  setup(){ <br>
+  &emsp;Serial.begin(9600); <br>
+  &emsp;Serial.println("MESA Rocks!"); <br>
+} <br> <br>
+<span class = "console-blue"> void </span>
+loop(){ <br>
+  &emsp;reading = analogRead(A0); <br>
+  &emsp;Serial.println(reading); <br>
+}
+</p>
+<p>
+  The photoresistor can be replaced with several different sensors.  Many sensors with only two wires can be inserted into the same location as the photoresistor and the code will work the same, many of the sensors with three wires will hook up the same as a potentiometer and the code will work.  Try switching out the photoresistor with a temperature sensor, or a flex sensor, or other sensors you may have available. <br>
+  Now that you can see what values are being output on the serial monitor, you can adjust your code to do what you need it to do. Here is an example of how you could modify the code to be a nightlight:
+</p>
+<h4> Circuit </h4>
+<img src = "Images/NightLight.png" class = "img2" width = "339" height = "230">
+<img src = "Images/NightLightDigital.png" class = "img2" width = "339" height = "230">
+
+<h4> Code </h4>
+<p> (This is exactly the same as the code above.) </p>
+<p class = "console">
+int reading = 0; <br> <br>
+<span class = "console-blue">void </span>
+  setup(){ <br>
+  &emsp;Serial.begin(9600); <br>
+  &emsp;pinMode(3,OUTPUT); <br>
+} <br> <br>
+<span class = "console-blue"> void </span>
+loop(){ <br>
+  &emsp;reading = analogRead(A0); <br>
+  &emsp;Serial.print("Value = "); <br>
+  &emsp;Serial.println(reading); <br>
+  &emsp;if(reading < 450){ <br>
+  &emsp;&emsp;digitalWrite(3,HIGH); <br>
+  &emsp;} else{ <br>
+  &emsp;&emsp;digitalWrite(3,LOW); <br>
+  &emsp;} <br>
+  &emsp;delay(100); <br>
+  }
+  <h3> Challenges </h3>
+  <ol class = "a">
+    <li> Using a potentiometer and two LEDs set us a circuit and write a code that will turn on one LED if the potentiometer value is less than 500 and the other LED if the value is greater than or equal to 500.  (Hint: use if statements.) <br> </li>
+    <li> Try using one of the other sensors you have available to control LED’s in some other way. <br> </li>
+</ol>
+</div>
+</body>
+</html>

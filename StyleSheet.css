@@ -1,0 +1,226 @@
+@font-face {
+  font-family: Montserrat;
+  src: url(Montserrat-Regular.otf);
+}
+@font-face{
+  font-family: liberata;
+  src: url(LiberataBook.otf);
+}
+@font-face{
+  font-family: console-font;
+  src: url(ConsoleFont.otf);
+}
+html{
+  background-color: #fffff0;
+}
+
+body{
+  margin: 0;
+}
+
+.text{
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+/*Headers*/
+h1{
+  font-size: 30px;
+  font-family:Montserrat;
+  color: #FFF;
+  float: left;
+  margin: 0;
+  padding: 6px;
+}
+h2{
+  font-size: 40px;
+  font-family: Montserrat;
+}
+h3{
+  font-size: 30px;
+  font-family: Montserrat;
+}
+h4{
+  font-size: 27px;
+  font-family: Montserrat;
+}
+p{
+  font-size: 18px;
+  font-family: liberata;
+}
+
+.noNewLine {
+  font-size: 18px;
+  font-family: liberata;
+}
+
+/*list*/
+ol.a{
+  list-style-type: decimal;
+  font-size: 18px;
+  font-style: liberata;
+}
+
+/*Fonts and colors for code sections.*/
+.console {
+  font-size: 18px;
+  font-family: console-font;
+}
+.console-blue {
+  font-size: 18px;
+  font-family: console-font;
+  color: blue;
+}
+
+/* top bar */
+div.title{
+  height: 100px;
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: #DC143C;
+  margin-right: 0px;
+  padding: 0;
+}
+
+div.diff-color{
+  width: 100%;
+  background color: #FFF;
+  height: 800px;
+}
+
+
+div.steps{
+  background-color: lightgrey;
+  padding: 2px;
+}
+div.text-block{
+  padding: 2px;
+}
+
+.container{
+  position: relative;
+  float: left;
+  height: 50px;
+}
+.container img{
+
+}
+.container .btn {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: 0;
+}
+
+/*images*/
+img.img1{
+  float:right;
+}
+img.img2 {
+  padding: 20px;
+}
+
+/* Image Gallery */
+div.gallery {
+  margin: 20px;
+  border: 1px solid #ccc;
+  width: 180px;
+  float: left;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  float: left;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.desc {
+  padding: 15px;
+}
+
+  /*Drop Down Menu*/
+  ul{
+  width:100%;
+  float:left;
+  font-family:Montserrat;
+  list-style:none;
+  padding:0;
+  border:none;
+  font-size:120%;
+  margin: 0;
+  }
+
+  li a{
+    display: block;
+    padding: 8px;
+  }
+
+  a{
+  text-decoration:none;
+  color: black;
+  display: block;
+  text-align: left;
+  }
+  a.link{
+    color: blue;
+    display: inline;
+    font-style: liberata;
+  }
+
+  a:hover {
+  color:darkgrey;
+  position: relative;
+  }
+
+  .dropdown {
+      position: relative;
+      display: inline-block;
+      float: left;
+  }
+
+  @media screen and (max-width: 730px) {
+    .dropdown{
+      display: none !important;
+    }
+  }
+
+  .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: rgba(255,255,255);
+      width: 100%;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+
+  .dropdown:hover .dropdown-content {
+      display: block;
+  }
+
+.dropdownP{
+  height: 40px;
+  width: 100%;
+  background-color: grey;
+  display: inline-block;
+  position: relative;
+  margin-top: 10px;
+}
+@media screen and (min-width: 730px){
+.dropdownP {
+  display: none !important;
+}
+
+}

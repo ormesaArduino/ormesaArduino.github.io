@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="StyleSheet.css">
+</head>
+<title> PWM </title>
+<body>
+    <div class = "title">
+      <div class = "container">
+        <img src = "Mesa Logo White.svg" height = "50px">
+        <button onclick="window.location.href = 'MESA Main Site.html';" class = "btn"> </button>
+      </div>
+      <h1> MESA Arduino Help </h1>
+      <ul>
+          <li class=  "dropdown">
+            <a href=  "MESA Main Site.html" class="dropbtn"> Home </a>
+          </li>
+          <li class=  "dropdown">
+        <a href=  "javascript:void(0)" class="dropbtn">Interactive Lessons</a>
+        <div class= "dropdown-content">
+          <a href = "Interactive Lesson 1.html">Interactive Lesson 1: Blink</a>
+          <a href = "Interactive Lesson 2.html">Interactive Lesson 2: Sensors</a>
+        </div>
+      </li>
+        <li class=  "dropdown">
+      <a href=  "javascript:void(0)" class="dropbtn">Advanced Lessons</a>
+      <div class= "dropdown-content">
+        <a href = "Libraries.html">Advanced: Libraries</a>
+        <a href = "Functions.html"> Advanced: Functions </a>
+        <a href = "PWM.html"> Advanced: PWM </a>
+      </div>
+    </li>
+    <li class=  "dropdown">
+  <a href=  "javascript:void(0)" class="dropbtn">Component Guides</a>
+  <div class= "dropdown-content">
+  </div>
+  </li>
+    </ul>
+  </div>
+  <div class = "text">
+  <h2> How To Use PWM </h2>
+  <p> So far, you have turned on and blinked LEDs, but you might be wondering, “how do I make the LED dimmer?” An Arduino can’t change the amount of voltage that comes out of a pin, so it instead uses a concept called PWM (Pulse Width Modulation). PWM is where the Arduino rapidly turns on and off the power for specific intervals of time. For example, it might be on for 75% of the time and off for 25% of the time. This would give the illusion that the LED is dimmer when it is really <i>fully</i> on for 75% of the time. </p>
+  <img src = "Images/PWM.png" height = 220px>
+  <p style="clear:both;">
+  <p> On the Arduino, only specific pins can use PWM. These are the digital pins with the ~ symbol next to them, usually 3, 5, 6, 9, 10, and 11. Analog pins cannot use PWM since analog pins are used for input devices only. </p>
+  <h3> The analogWrite Function </h3>
+  <p> The analogWrite function is the function that will enable you to use PWM on the Arduino. The “level” number represents the amount of time that power is coming through the pin (as a fraction, out of 255). <br> </p>
+  <p class = "console"> &emsp;analogWrite(pin #, level); <br></p>
+  <p> For example, if you set the level to 100, power would be coming through the pin for 100/255 (39%) of the time. If you set the level to 255, the power would be on for 255/255 (100%) of the time. </p>
+  <h3> Activity 1: Using PWM </h3>
+  <h4> Supplies Needed: </h4>
+
+  <div class="gallery">
+  <a target="_blank" href="Images/Redboard.jpg">
+    <img src="Images/Redboard.jpg" width="200" height="200">
+  </a>
+  <div class="desc">Arduino board</div>
+  </div>
+
+  <div class="gallery">
+  <a target="_blank" href="Images/Breadboard.jpg">
+  <img src="Images/Breadboard.jpg" width="200" height="200">
+  </a>
+  <div class="desc">1 breadboard</div>
+  </div>
+
+  <div class="gallery">
+  <a target="_blank" href="Images/LED.jpg">
+    <img src="Images/LED.jpg" width="200" height="200">
+  </a>
+  <div class="desc"> 1 LED (any color)</div>
+  </div>
+
+  <div class="gallery">
+  <a target="_blank" href="Images/Resistor.jpg">
+    <img src="Images/Resistor.jpg" width="200" height="200">
+  </a>
+  <div class="desc">1 330 ohm resistor</div>
+  </div>
+
+  <div class="gallery">
+  <a target="_blank" href="Images/Wires.jpg">
+  <img src="Images/Wires.jpg" width="200" height="200">
+  </a>
+  <div class="desc">2 Jumper Wires</div>
+  </div>
+
+  <p style="clear:both;">
+  <p> For this activity, we will be using PWM to make an LED appear dimmer. First, connect the LED to the pin 11 on the Arduino with the resistor like the photo below: </p>
+  <img src ="Images/Dimmer.png" height = 300px>
+  <img src = "Images/DimmerDigital.png" height = 300px>
+  <p style="clear:both;">
+  <p>Next, type the following code into the Arduino IDE and click upload: </p>
+  <p class = "console">
+    &emsp;int ledPin = 11; <br>
+    &emsp;void setup() { <br>
+	     &emsp;&emsp;pinMode(ledPin, OUTPUT); <br>
+     &emsp;} <br> <br>
+
+     &emsp;void loop(){ <br>
+	      &emsp;&emsp;analogWrite(ledPin, 100); <br>
+	      &emsp;&emsp;delay(750); <br>
+	      &emsp;&emsp;analogWrite(ledPin, 255); <br>
+	      &emsp;&emsp;delay(750); <br>
+      &emsp;}
+  </p>
+  <h3> Challenge </h3>
+  <p>
+  Now that you know how to use PWM, connect a potentiometer and an LED to the Arduino. Write a program that will make the LED dimmer or brighter depending on how far the potentiometer is turned. <br>
+  (HINT: The output from the analogRead function is a value between 0 and 1023 and the input for analogWrite must be between 0 and 255. You will need to convert the value from the potentiometer to a value between 0 and 255.)
+  </p>
+</div>
+</body>
+</html>
