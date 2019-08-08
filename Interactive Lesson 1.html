@@ -157,23 +157,20 @@
 <h4> Code </h4>
 <p>To enter the code, open the Arduino IDE or another Arduino code editor. Before you do anything, in the selection bar at the top left, scroll over “Tools > Board” then click “Arduino Genuino Uno”. Next, scroll over “Tools > Ports” Then select the port that has “Arduino Genuino Uno” in parentheses. Next, enter the code and click “upload”. It should be the arrow pointing to the right. </p>
 
-<p class = "console"> // the setup function runs once, it sets up for the main program <p class = "console">
-<span class = "console-blue"> void </span>
-<span class = "console"> setup(){ </span>
-<p class = "console">
-  &emsp; pinMode(3, OUTPUT);<br>
-} <br>
-  // the loop function runs over and over again, this is your main program
-</p>
-  <span class = "console-blue"> void </span>
-  <span class = "console"> loop(){ </span>
-  <p class = "console">
-    &emsp;digitalWrite(3,HIGH); <br>
-    &emsp;delay (500); <br>
-  	&emsp;digitalWrite(3,LOW); <br>
-    &emsp;delay (500); <br>
-  }
-</p>
+<pre><code class = "txt">
+// the setup function runs once, it sets up for the main program
+<span style = "color: blue;">void </span>setup(){
+  pinMode(3, OUTPUT);<br>
+}
+
+// the loop function runs over and over again, this is your main program
+<span>void </span>loop(){
+  digitalWrite(3,HIGH);
+  delay (500);
+  digitalWrite(3,LOW);
+  delay (500);
+}
+</code></pre>
 <p> This is what it looks like on the computer screen: </p>
 <img src = "Images/BlinkCode1.png">
 <h4> Exploring the Code </h4>
@@ -186,23 +183,20 @@
 </ol>
 <p> Now let’s add another light. Follow steps 1-4 on page 2 and 3 again in a different spot on the breadboard. This time, in step 4, connect the wire to pin 5 instead of pin 3.  Look at the code below, how does the wiring change?  What pins are wires connected to? </p>
 <h4> Code </h4>
-<span class = "console-blue"> void </span>
-<span class = "console"> setup(){ </span>
-<p class = "console">
-  &emsp; pinMode(3, OUTPUT);<br>
+<pre><code class = "txt">
+<span style = "color: blue;"> void </span> setup(){
+  pinMode(3, OUTPUT);
 }
-</p>
-  <span class = "console-blue"> void </span>
-  <span class = "console"> loop(){ </span>
-  <p class = "console">
-    &emsp;digitalWrite(3,HIGH); <br>
-    &emsp;digitalWrite(5,LOW); <br>
-    &emsp;delay (500); <br>
-    &emsp;digitalWrite(5,HIGH); <br>
-  	&emsp;digitalWrite(3,LOW); <br>
-    &emsp;delay (500); <br>
-  }
-</p>
+
+<span style = "color: blue;"> void </span> loop(){
+  digitalWrite(3,HIGH);
+  digitalWrite(5,LOW);
+  delay (500);
+  digitalWrite(5,HIGH);
+  digitalWrite(3,LOW);
+  delay(500);
+}
+</code></pre>
 <h4> Exploring the Code </h4>
 <ol class = "a">
   <li> Why is the light different for pin 3 and for pin 5?  What is the problem with the code? What needs to be added to the setup? <br> <br> </li>

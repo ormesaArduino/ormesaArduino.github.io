@@ -48,6 +48,9 @@ p{
   font-size: 18px;
   font-family: liberata;
 }
+code.txt {
+  font-size: 17px;
+}
 
 .noNewLine {
   font-size: 18px;
@@ -88,6 +91,20 @@ div.diff-color{
   height: 800px;
 }
 
+a.frontOption{
+  padding: 10px;
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 20%
+}
+
+a.frontOption:hover{
+  color: none;
+ }
+
+img.imgn {
+  width: 100%;
+}
 
 div.steps{
   background-color: lightgrey;

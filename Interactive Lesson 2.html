@@ -83,19 +83,20 @@
 <div class = "text">
 <h4> Potentiometer Code </h4>
 <p>Now enter the following code into the Arduino IDE and upload it: </p>
-<p class = "console">
-int reading = 0; <br> <br>
-<span class = "console-blue">void </span>
-  setup(){ <br>
-  &emsp;Serial.begin(9600); <br>
-  &emsp;Serial.println("MESA Rocks!"); <br>
-} <br> <br>
-<span class = "console-blue"> void </span>
-loop(){ <br>
-  &emsp;reading = analogRead(A0); <br>
-  &emsp;Serial.println(reading); <br>
+<pre> <code class = "txt">
+<span style = "color: blue;">int</span> reading = 0;
+
+<span style = "color: blue">void </span>setup(){
+  Serial.begin(9600);
+  Serial.println("MESA Rocks!");
 }
-</p>
+
+<span style = "color: blue;">void </span>loop(){
+  reading = analogRead(A0);
+  Serial.print("Value: ");
+  Serial.println(reading);
+}
+</code></pre>
 <h4> Explore the Code </h4>
 <ol class = "a">
   <img src = "Images/Serial-Monitor.png" class = "img1" height = 60>
@@ -151,19 +152,20 @@ loop(){ <br>
 <p>Notice that the code doesn’t change. Also note that the wire to A0, one wire from the sensor, and one wire from the resistor are all connected.  Move your hand over the sensor. How do the values change? Try switching the resistor and the sensor.  How does that change the values? </p>
 <h4> Code </h4>
 <p> (This is exactly the same as the code above.) </p>
-<p class = "console">
-int reading = 0; <br> <br>
-<span class = "console-blue">void </span>
-  setup(){ <br>
-  &emsp;Serial.begin(9600); <br>
-  &emsp;Serial.println("MESA Rocks!"); <br>
-} <br> <br>
-<span class = "console-blue"> void </span>
-loop(){ <br>
-  &emsp;reading = analogRead(A0); <br>
-  &emsp;Serial.println(reading); <br>
+<pre> <code class = "txt">
+<span style = "color: blue;">int</span> reading = 0;
+
+<span style = "color: blue">void </span>setup(){
+  Serial.begin(9600);
+  Serial.println("MESA Rocks!");
 }
-</p>
+
+<span style = "color: blue;">void </span>loop(){
+  reading = analogRead(A0);
+  Serial.print("Value: ");
+  Serial.println(reading);
+}
+</code></pre>
 <p>
   The photoresistor can be replaced with several different sensors.  Many sensors with only two wires can be inserted into the same location as the photoresistor and the code will work the same, many of the sensors with three wires will hook up the same as a potentiometer and the code will work.  Try switching out the photoresistor with a temperature sensor, or a flex sensor, or other sensors you may have available. <br>
   Now that you can see what values are being output on the serial monitor, you can adjust your code to do what you need it to do. Here is an example of how you could modify the code to be a nightlight:
@@ -173,26 +175,25 @@ loop(){ <br>
 <img src = "Images/NightLightDigital.png" class = "img2" width = "339" height = "230">
 
 <h4> Code </h4>
-<p> (This is exactly the same as the code above.) </p>
-<p class = "console">
-int reading = 0; <br> <br>
-<span class = "console-blue">void </span>
-  setup(){ <br>
-  &emsp;Serial.begin(9600); <br>
-  &emsp;pinMode(3,OUTPUT); <br>
-} <br> <br>
-<span class = "console-blue"> void </span>
-loop(){ <br>
-  &emsp;reading = analogRead(A0); <br>
-  &emsp;Serial.print("Value = "); <br>
-  &emsp;Serial.println(reading); <br>
-  &emsp;if(reading < 450){ <br>
-  &emsp;&emsp;digitalWrite(3,HIGH); <br>
-  &emsp;} else{ <br>
-  &emsp;&emsp;digitalWrite(3,LOW); <br>
-  &emsp;} <br>
-  &emsp;delay(100); <br>
+<pre><code class = "txt">
+<span style = "color: blue;">int</span> reading = 0;
+
+<span style = "color: blue;">void </span>setup(){
+  Serial.begin(9600);
+  pinMode(3,OUTPUT);
+}
+<span style = "color: blue;">void </span>loop(){
+  reading = analogRead(A0);
+  Serial.print("Value = ");
+  Serial.println(reading);
+  if(reading < 450){
+      digitalWrite(3,HIGH);
+  } else{
+    digitalWrite(3,LOW);
   }
+  delay(100);
+}
+</code></pre>
   <h3> Challenges </h3>
   <ol class = "a">
     <li> Using a potentiometer and two LEDs set us a circuit and write a code that will turn on one LED if the potentiometer value is less than 500 and the other LED if the value is greater than or equal to 500.  (Hint: use if statements.) <br> </li>
