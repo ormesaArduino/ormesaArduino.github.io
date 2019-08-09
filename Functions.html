@@ -43,76 +43,63 @@
   <p> A function is a specific instruction that an Arduino can follow. In Arduino programming, you may find it useful to create your own functions. When you create a function, you are really grouping together several instructions into one. For example, you could create a function to blink an LED given the time between turning the LED on/off. </p>
   <h3> How Do I Create One? </h3>
   <p> In order to declare (create) a function, you will need to write a function declaration. Function declarations should go below void loop() on the outside of the curly braces. Here is what a function declaration will look like: </p>
-  <b> <p class = "console">
-    <span style = "color: #d0ff00;"> &emsp;returnType</span>
-    <span style = "color: blue;"> functionName</span>
-    (
-    <span style = "color: red;"> dataType parameter1, dataType parameter2...</span>
-    ){ <br>
-    &emsp;&emsp;//The actual code will go in here, within the curly braces. <br>
-  	&emsp;&emsp;//This is called the function body. <br>
-  	&emsp;&emsp;//... <br>
-  &emsp;}
-</p> </b>
-
+<code class = "txt"><pre>
+<span style = "color: #d0ff00;">  returnType </span><span style = "color: blue;">functionName</span>(<span style = "color: red;">dataType parameter1, dataType parameter2...</span>){
+  //The actual code will go in here, within the curly braces.
+  //This is called the function body.
+  //...
+  }
+</pre></code>
 <h4> Parts of a Function Declaration </h4>
 <p>
-  <b><span class = "console" style = "color: blue;"> Function Name: </span></b>
+  <code class = "txt" style = "color: blue;"> Function Name: </code>
   What do you want to name your function? This is the unique title of the function that you will type every time you want to use it. If the function will blink an LED, you could name it “blinkLED”.
 </p>
 
 <p>
-  <span class = "console" style = "color: red;"> Parameters/Arguments </span>
+  <code class = "txt" style = "color: red;"> Parameters/Arguments: </code>
   What values does your function need to know in order to operate? What is the data type of each value (int, long, double, string, char, etc.)? Whenever you use the function, you will put these values that the function will use within the parentheses (). If you are blinking an LED, you will need the pin of the LED (int) and the time between blinks (int).
 </p>
-
 <p>
-<b><span class = "console" style = "color: #d0ff00"> returnType: </span></b>
-What is the datatype of the value that will come out of your function? If you are blinking an LED, there probably will not be a value that is returned/output by your function. If this is the case, the return type will be void. If you do indicate a return type, you will need a return statement somewhere in your code. The return statement is the code that actually outputs the value. A return statement is modeled like this:<br> <br>
-<b> <span class = "console"> &emsp;return value; <br> <br> </span></b>
- A return statement goes inside the braces of each function you want to declare. <br> </p>
+<code class = "txt" style = "color: #d0ff00"> returnType: </code>
+What is the datatype of the value that will come out of your function? If you are blinking an LED, there probably will not be a value that is returned/output by your function. If this is the case, the return type will be void. If you do indicate a return type, you will need a return statement somewhere in your code. The return statement is the code that actually outputs the value. A return statement is modeled like this:
+</p>
+<code class = "txt"><pre>  return value; </pre></code>
+<p>A return statement goes inside the braces of each function you want to declare. </p>
 
 <p> Below is an example of a function that will blink the LED that is connected to the pin ledPin for blinkTime milliseconds: </p>
-<b> <p class = "console">
-  <span style = "color: #d0ff00;"> &emsp;void</span>
-  <span style = "color: blue;"> blinkLED</span>
-  (
-  <span style = "color: red;"> int ledPin, int blinkTime</span>
-  ){ <br>
-  &emsp;&emsp;digitalWrite(ledPin, HIGH); <br>
-  &emsp;&emsp;delay(blinkTime); <br>
-  &emsp;&emsp;digitalWrite(ledPin, LOW); <br>
-  &emsp;&emsp;delay(blinkTime); <br>
-&emsp;}
-</p></b>
+<pre><code class = "txt">
+<span style = "color: #d0ff00;">void</span><span style = "color: blue;"> blinkLED</span>(<span style = "color: red;">int ledPin, int blinkTime</span>){
+  digitalWrite(ledPin, HIGH);
+  delay(blinkTime);
+  digitalWrite(ledPin, LOW);
+  delay(blinkTime);
+}
+</code></pre>
 <p>And here is an example of a function that takes in a number and adds two to it: </p>
-<b> <p class = "console">
-  <span style = "color: #d0ff00;"> &emsp;int</span>
-  <span style = "color: blue;"> addTwo</span>
-  (
-  <span style = "color: red;"> int num</span>
-  ){ <br>
-  &emsp;&emsp;return num + 2; <br>
-&emsp;}
-</p> </b>
+<pre><code class = "txt">
+<span style = "color: #d0ff00;">int</span><span style = "color: blue;"> addTwo</span>(<span style = "color: red;">int num</span>){
+  return num + 2;
+}
+</code></pre>
 
 <p> Using functions you wrote works the same as using the built-in functions. You call the function by typing the function name, then each part of the argument within parentheses. For example, if you wanted to blink an LED connected to pin 2 for 500 milliseconds, your overall code would look something like this: </p>
-<b><p class = "console">
-&emsp;void setup(){ <br>
-	&emsp;&emsp;pinMode(2, OUTPUT);<br>
-&emsp;} <br><br>
+<pre><code class = "txt">
+<span style = "color:blue;">void</span> setup(){
+  pinMode(2, OUTPUT);
+}
 
-&emsp;void loop(){ <br>
-	&emsp;&emsp;blink(2, 500); <br>
-&emsp;} <br> <br>
+<span style = "color:blue;">void</span> loop(){
+  blink(2, 500);
+}
 
-&emsp;void blinkLED(int ledPin, int blinkTime){ <br>
-	&emsp;&emsp;digitalWrite(ledPin, HIGH); <br>
-	&emsp;&emsp;delay(blinkTime); <br>
-	&emsp;&emsp;digitalWrite(ledPin, LOW); <br>
-	&emsp;&emsp;delay(blinkTime); <br>
-&emsp;}
-</p></b>
+<span style = "color:blue;">void</span> blinkLED(int ledPin, int blinkTime){
+  digitalWrite(ledPin, HIGH);
+  delay(blinkTime);
+  digitalWrite(ledPin, LOW);
+  delay(blinkTime);
+}
+</code></pre>
 </div>
 </body>
 </html>

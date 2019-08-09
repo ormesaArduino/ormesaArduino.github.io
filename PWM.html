@@ -44,8 +44,8 @@
   <p style="clear:both;">
   <p> On the Arduino, only specific pins can use PWM. These are the digital pins with the ~ symbol next to them, usually 3, 5, 6, 9, 10, and 11. Analog pins cannot use PWM since analog pins are used for input devices only. </p>
   <h3> The analogWrite Function </h3>
-  <p> The analogWrite function is the function that will enable you to use PWM on the Arduino. The “level” number represents the amount of time that power is coming through the pin (as a fraction, out of 255). <br> </p>
-  <p class = "console"> &emsp;analogWrite(pin #, level); <br></p>
+  <p> The analogWrite function is the function that will enable you to use PWM on the Arduino. The “level” number represents the amount of time that power is coming through the pin (as a fraction, out of 255). </p>
+  <code class = "txt"> &emsp;analogWrite(pin #, level); </code>
   <p> For example, if you set the level to 100, power would be coming through the pin for 100/255 (39%) of the time. If you set the level to 255, the power would be on for 255/255 (100%) of the time. </p>
   <h3> Activity 1: Using PWM </h3>
   <h4> Supplies Needed: </h4>
@@ -91,19 +91,20 @@
   <img src = "Images/DimmerDigital.png" height = 300px>
   <p style="clear:both;">
   <p>Next, type the following code into the Arduino IDE and click upload: </p>
-  <p class = "console">
-    &emsp;int ledPin = 11; <br>
-    &emsp;void setup() { <br>
-	     &emsp;&emsp;pinMode(ledPin, OUTPUT); <br>
-     &emsp;} <br> <br>
+<code class = "txt"><pre>
+int ledPin = 11;
 
-     &emsp;void loop(){ <br>
-	      &emsp;&emsp;analogWrite(ledPin, 100); <br>
-	      &emsp;&emsp;delay(750); <br>
-	      &emsp;&emsp;analogWrite(ledPin, 255); <br>
-	      &emsp;&emsp;delay(750); <br>
-      &emsp;}
-  </p>
+<span style = "color: blue;">void</span> setup(){
+  pinMode(ledPin, OUTPUT);
+}
+
+<span style = "color: blue;">void</span> loop(){
+  analogWrite(ledPin, 100);
+  delay(750);
+  analogWrite(ledPin, 255);
+  delay(750);
+}
+</pre></code>
   <h3> Challenge </h3>
   <p>
   Now that you know how to use PWM, connect a potentiometer and an LED to the Arduino. Write a program that will make the LED dimmer or brighter depending on how far the potentiometer is turned. <br>
