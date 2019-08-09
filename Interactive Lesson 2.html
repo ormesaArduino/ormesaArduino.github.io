@@ -22,19 +22,22 @@
           <a href = "Interactive Lesson 2.html">Interactive Lesson 2: Sensors</a>
         </div>
       </li>
-        <li class=  "dropdown">
-      <a href=  "javascript:void(0)" class="dropbtn">Advanced Lessons</a>
-      <div class= "dropdown-content">
-        <a href = "Libraries.html">Advanced: Libraries</a>
-        <a href = "Functions.html"> Advanced: Functions </a>
-        <a href = "PWM.html"> Advanced: PWM </a>
-      </div>
-    </li>
-    <li class=  "dropdown">
-  <a href=  "javascript:void(0)" class="dropbtn">Component Guides</a>
-  <div class= "dropdown-content">
-  </div>
+      <li class=  "dropdown">
+    <a href=  "javascript:void(0)" class="dropbtn">Advanced Lessons</a>
+    <div class= "dropdown-content">
+      <a href = "Variables and Control Structures.html">RECOMMENDED: Variables/Control Structures</a>
+      <a href = "Libraries.html">Advanced: Libraries</a>
+      <a href = "Functions.html"> Advanced: Functions </a>
+      <a href = "PWM.html"> Advanced: PWM </a>
+    </div>
   </li>
+  <li class=  "dropdown">
+<a href=  "javascript:void(0)" class="dropbtn">Component Guides</a>
+<div class= "dropdown-content">
+  <a href = "RGB LED.html">Multi-Colored LED</a>
+</div>
+</li>
+
     </ul>
   </div>
   <div class = "text">
@@ -76,9 +79,17 @@
 <h4> Circuit </h4>
 <p>To connect the potentiometer to the Arduino, connect the 5V and GND Arduino pins to the side pins on the sensor (it doesn’t matter which side is 5V and which side is GND) and A0 on the Arduino to the middle pin on the sensor (see images below). Most sensors that have three pins can be connected exactly like this. </p>
 
-<img src = "Images/PotentiometerCircuit.png" class = "img2" width = "339" height = "230">
-<img src = "Images/PotentiometerCircuitDigital.png" class = "img2" width = "357.3" height = "230">
-<p style="clear:both;"
+<div class = "imglink">
+  <a target = "_blank" href = "Images/PotentiometerCircuit.png">
+    <img src = "Images/PotentiometerCircuit.png" height = "230px">
+  </a>
+</div>
+<div class = "imglink">
+  <a target = "_blank" href = "Images/PotentiometerCircuitDigital.png">
+  <img src = "Images/PotentiometerCircuitDigital.png" height = "230px">
+</a>
+</div>
+<br clear = all>
 
 <div class = "text">
 <h4> Potentiometer Code </h4>
@@ -144,10 +155,17 @@
 
 <h4> Circuit </h4>
 
-<img src = "Images/PhotoresistorCircuit.png" class = "img2" width = "339" height = "230">
-<img src = "Images/PhotoresistorCircuitDigital.png" class = "img2" width = "339" height = "230">
-
-<p style="clear:both;">
+<div class = "imglink">
+  <a target = "_blank" href = "Images/PhotoresistorCircuit.png">
+    <img src = "Images/PotentiometerCircuit.png" height = "230px">
+  </a>
+</div>
+<div class = "imglink">
+  <a target = "_blank" href = "Images/PhotoresistorCircuitDigital.png">
+  <img src = "Images/PotentiometerCircuitDigital.png" height = "230px">
+</a>
+</div>
+<br clear = all>
 
 <p>Notice that the code doesn’t change. Also note that the wire to A0, one wire from the sensor, and one wire from the resistor are all connected.  Move your hand over the sensor. How do the values change? Try switching the resistor and the sensor.  How does that change the values? </p>
 <h4> Code </h4>
@@ -171,8 +189,17 @@
   Now that you can see what values are being output on the serial monitor, you can adjust your code to do what you need it to do. Here is an example of how you could modify the code to be a nightlight:
 </p>
 <h4> Circuit </h4>
-<img src = "Images/NightLight.png" class = "img2" width = "339" height = "230">
-<img src = "Images/NightLightDigital.png" class = "img2" width = "339" height = "230">
+<div class = "imglink">
+  <a target = "_blank" href = "Images/NightLight.png">
+    <img src = "Images/NightLight.png" height = "230px">
+  </a>
+</div>
+<div class = "imglink">
+  <a target = "_blank" href = "Images/NightLightDigital.png">
+  <img src = "Images/NightLightDigital.png" height = "230px">
+</a>
+</div>
+<br clear = all>
 
 <h4> Code </h4>
 <pre><code class = "txt">

@@ -6,10 +6,6 @@
   font-family: liberata;
   src: url(LiberataBook.otf);
 }
-@font-face{
-  font-family: console-font;
-  src: url(ConsoleFont.otf);
-}
 html{
   background-color: #fffff0;
 }
@@ -49,7 +45,10 @@ p{
   font-family: liberata;
 }
 code.txt {
-  font-size: 17px;
+  font-size: 15px;
+}
+code.head {
+  font-size: 20px;
 }
 
 .noNewLine {
@@ -62,17 +61,6 @@ ol.a{
   list-style-type: decimal;
   font-size: 18px;
   font-style: liberata;
-}
-
-/*Fonts and colors for code sections.*/
-.console {
-  font-size: 18px;
-  font-family: console-font;
-}
-.console-blue {
-  font-size: 18px;
-  font-family: console-font;
-  color: blue;
 }
 
 /* top bar */
@@ -102,10 +90,6 @@ a.frontOption:hover{
   color: none;
  }
 
-img.imgn {
-  width: 100%;
-}
-
 div.steps{
   background-color: lightgrey;
   padding: 2px;
@@ -119,9 +103,7 @@ div.text-block{
   float: left;
   height: 50px;
 }
-.container img{
 
-}
 .container .btn {
   position: absolute;
   width: 100%;
@@ -151,11 +133,9 @@ div.gallery {
   width: 180px;
   float: left;
 }
-
 div.gallery:hover {
   border: 1px solid #777;
 }
-
 div.gallery img {
   width: 100%;
   float: left;
@@ -163,9 +143,26 @@ div.gallery img {
   margin-left: auto;
   margin-right: auto;
 }
-
 div.desc {
   padding: 15px;
+}
+
+/*Clickable image*/
+div.imglink{
+  margin-right: 0;
+  border: 1px solid #ccc;
+  float: left;
+  margin-top: 10px;
+  margin-bottom:10px;
+}
+div.imglink img{
+  float: left;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+div.imglink:hover{
+  border: 1px solid #777;
 }
 
   /*Drop Down Menu*/
