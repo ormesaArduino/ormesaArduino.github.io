@@ -91,7 +91,6 @@
 </div>
 <br clear = all>
 
-<div class = "text">
 <h4> Potentiometer Code </h4>
 <p>Now enter the following code into the Arduino IDE and upload it: </p>
 <pre> <code class = "txt">
@@ -202,6 +201,7 @@
 <br clear = all>
 
 <h4> Code </h4>
+<p>Note: If you are in a bright room, you might need to change the value in the line <code> if(reading < 450){ </code> to be higher than 450. Look at the values on the serial monitor and choose a value that is larger than the values when your finger is on the sensor, but smaller than the values when your finger is off the sensor.</p>
 <pre><code class = "txt">
 <span style = "color: blue;">int</span> reading = 0;
 
@@ -211,7 +211,7 @@
 }
 <span style = "color: blue;">void </span>loop(){
   reading = analogRead(A0);
-  Serial.print("Value = ");
+  Serial.print("Value: ");
   Serial.println(reading);
   if(reading < 450){
       digitalWrite(3,HIGH);
@@ -224,7 +224,7 @@
   <h3> Challenges </h3>
   <ol class = "a">
     <li> Using a potentiometer and two LEDs set us a circuit and write a code that will turn on one LED if the potentiometer value is less than 500 and the other LED if the value is greater than or equal to 500.  (Hint: use if statements.) <br> </li>
-    <li> Try using one of the other sensors you have available to control LED’s in some other way. <br> </li>
+    <li> Try using one of the other sensors you have available to control LED’s in some other way. <br><br> </li>
 </ol>
 </div>
 </body>
