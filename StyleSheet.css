@@ -10,6 +10,10 @@ html{
   background-color: #fffff0;
 }
 
+div.test{
+  display: block;
+}
+
 body{
   margin: 0;
 }
