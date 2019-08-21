@@ -130,6 +130,13 @@ img.img2 {
   padding: 20px;
 }
 
+div.questions{
+  background-color: #add8e6;
+  width: 100%;
+  padding: 3px;
+  padding-top: 1px;
+}
+
 /* Image Gallery */
 div.gallery {
   margin: 20px;
