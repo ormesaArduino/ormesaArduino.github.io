@@ -35,12 +35,48 @@
   <a href=  "javascript:void(0)" class="dropbtn">Component Guides</a>
   <div class= "dropdown-content">
     <a href = "RGB LED.html">Multi-Colored LED</a>
+    <a href = "Servos.html">Servo Motors</a>
   </div>
   </li>
     </ul>
   </div>
-
     <div class = "text">
+      <h2> Servo Motors </h2>
+      <p>Servo motors are small motors that can turn to a specific angle between 0 and 180 degrees. Servos are very easy to connect to an Arduino and begin using.</p>
+      <h3>Wiring Servos to an Arduino</h3>
+      <p>To connect a servo to an Arduino, simply connect the two edge wires to the 5V and GND pins and the center wire to one of the PWM pins. You do not need a resistor to do this. Here is an example of a servo connected to the arduino on pin 3 with and without a breadboard.</p>
+      <div class = "imglink">
+        <a target = "_blank" href = "Images-original/Servo-Hookup.png">
+        <img src = "Images/Servo-Hookup.png" height = "230px">
+      </a>
+      </div>
+      <div class = "imglink">
+        <a target = "_blank" href = "Images-original/Servo-Hookup-NoBread.jpg">
+        <img src = "Images/Servo-Hookup-NoBread.jpg" height = "230px">
+      </a>
+      </div>
+      <br clear = all>
+      <p>You will want to use a breadboard if you are using the 5V pin for more than one device. For example, you might need to connect both a servo motor and a light sensor to the Arduino, which both need the 5V pin.</p>
+      <h3> The Servo Library </h3>
+      <p>To use the servo library, you must first put an include statement in the beginning of your code:</p>
+      <code class = "txt"><pre>  #<span style = "color: green">include</span> &lt;<span style = "color:red;"><b>Servo</b></span>.h></pre></code>
+      <p>This will allow you to use the functions from the servo library. To begin using your servo motor, you will need to create a servo object in your code. To create a servo object, write:</p>
+      <code class = "txt"><pre>  <span style = "color:red;"><b>Servo</b></span> servoName;</pre></code>
+      <p>Create the servo object by first typing the word Servo (capital ‘S’), then assigning it a name that you will use to refer to it later (you can think of this like declaring a variable). In this case, the name is servoName. You will put this line of code right after the “#include <Servo.h>” statement. </p>
+      <h4>void setup</h4>
+      <p>Within the void setup portion of your code, you will tell the Arduino which pin the servo is connected to with the attach function:</p>
+      <code class = "txt"><pre>  servoName.<span style = "color:red;">attach</span>(3);</pre></code>
+      <p>This line tells the computer that your servo motor is connected to pin 3.</p>
+      <h4>void loop</h4>
+      <p>Within the void loop portion of your code, you will tell the Arduino to move the servo to whichever position you want. To do this, use the write function:</p>
+      <code class = "txt"><pre>  servoName.<span style = "color:red;">write</span>(90);</pre></code>
+      <p>This function tells the Arduino to turn to the position 90 degrees. This doesn’t mean that the Arduino will turn 90 degrees from where it is now. It will turn to the position that is 90 degrees from some starting position. After you write this code you will need to include a “delay();” statement to give the servo time to move.</p>
+      <h3>Sample Code</h3>
+      <iframe src=https://create.arduino.cc/editor/ormesa-eb/10b9d36e-2de8-48ad-838e-0d5e897500f8/preview?embed style="height:510px;width:80%;margin:10px 0" frameborder=0></iframe>
+      <p>After uploading the code successfully, try changing the value within the function “myServo.write();” to 45. What happens?</p>
+      <iframe src=https://create.arduino.cc/editor/ormesa-eb/acb92735-cfaa-4aaa-b77b-a6270eff6666/preview?embed style="height:510px;width:80%;margin:10px 0" frameborder=0></iframe>
+      <p>This program tells the Arduino to rotate from 0 to 180 degrees by turning 1 degree at a time. In each iteration of the for loop, the Arduino increases the position by 1(“pos += 1”), tells the servo to turn to that position(“myServo.write”), then waits for the servo to turn that one degree (“delay”). To change the speed, simply change the number within the “delay” functions. To change the angles of rotation, change the “0” and “180” values inside the for loop to whatever you want it to be.</p>
+
     </div>
   </body>
 </html>

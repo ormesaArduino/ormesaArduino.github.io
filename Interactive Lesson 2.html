@@ -35,6 +35,7 @@
 <a href=  "javascript:void(0)" class="dropbtn">Component Guides</a>
 <div class= "dropdown-content">
   <a href = "RGB LED.html">Multi-Colored LED</a>
+  <a href = "Servos.html">Servo Motors</a>
 </div>
 </li>
 
@@ -93,22 +94,10 @@
 
 <h4> Potentiometer Code </h4>
 <p>Now enter the following code into the Arduino IDE and upload it: </p>
-<pre> <code class = "txt">
-<span style = "color: blue;">int</span> reading = 0;
-
-<span style = "color: blue">void </span>setup(){
-  Serial.begin(9600);
-  Serial.println("MESA Rocks!");
-}
-
-<span style = "color: blue;">void </span>loop(){
-  reading = analogRead(A0);
-  Serial.print("Value: ");
-  Serial.println(reading);
-}
-</code></pre>
+<iframe src=https://create.arduino.cc/editor/ormesa-eb/37478716-9db0-4d74-9655-6aa0fa7fc4c4/preview?embed style="height:510px;width:80%;margin:10px 0" frameborder=0></iframe>
 <h4> Explore the Code </h4>
 <div class = "questions">
+<p>Discuss the following questions with your group:</p>
 <ol class = "a">
   <img src = "Images/Serial-Monitor.png" class = "img1" height = 60>
   <li> Click on the magnifying glass icon in the Arduino IDE. Turn the potentiometer and look at the values on the screen. What is going on? <br> <br> </li>
@@ -171,20 +160,7 @@
 <p>Notice that the code doesn’t change. Also note that the wire to A0, one wire from the sensor, and one wire from the resistor are all connected.  Move your hand over the sensor. How do the values change? Try switching the resistor and the sensor.  How does that change the values? </p>
 <h4> Code </h4>
 <p> (This is exactly the same as the code above.) </p>
-<pre> <code class = "txt">
-<span style = "color: blue;">int</span> reading = 0;
-
-<span style = "color: blue">void </span>setup(){
-  Serial.begin(9600);
-  Serial.println("MESA Rocks!");
-}
-
-<span style = "color: blue;">void </span>loop(){
-  reading = analogRead(A0);
-  Serial.print("Value: ");
-  Serial.println(reading);
-}
-</code></pre>
+<iframe src=https://create.arduino.cc/editor/ormesa-eb/37478716-9db0-4d74-9655-6aa0fa7fc4c4/preview?embed style="height:510px;width:80%;margin:10px 0" frameborder=0></iframe>
 <p>
   The photoresistor can be replaced with several different sensors.  Many sensors with only two wires can be inserted into the same location as the photoresistor and the code will work the same, many of the sensors with three wires will hook up the same as a potentiometer and the code will work.  Try switching out the photoresistor with a temperature sensor, or a flex sensor, or other sensors you may have available. <br>
   Now that you can see what values are being output on the serial monitor, you can adjust your code to do what you need it to do. Here is an example of how you could modify the code to be a nightlight:
@@ -204,25 +180,7 @@
 
 <h4> Code </h4>
 <p>Note: If you are in a bright room, you might need to change the value in the line <code> if(reading < 450){ </code> to be higher than 450. Look at the values on the serial monitor and choose a value that is larger than the values when your finger is on the sensor, but smaller than the values when your finger is off the sensor.</p>
-<pre><code class = "txt">
-<span style = "color: blue;">int</span> reading = 0;
-
-<span style = "color: blue;">void </span>setup(){
-  Serial.begin(9600);
-  pinMode(3,OUTPUT);
-}
-<span style = "color: blue;">void </span>loop(){
-  reading = analogRead(A0);
-  Serial.print("Value: ");
-  Serial.println(reading);
-  if(reading < 450){
-      digitalWrite(3,HIGH);
-  } else{
-    digitalWrite(3,LOW);
-  }
-  delay(100);
-}
-</code></pre>
+<iframe src=https://create.arduino.cc/editor/ormesa-eb/86d6ff32-5962-4b9b-b21b-b0b59e41e71a/preview?embed style="height:510px;width:80%;margin:10px 0" frameborder=0></iframe>
   <h3> Challenges </h3>
   <p>If you have extra time after completing lesson 1 and 2, you may work on the following challenges:</p>
   <ol class = "a">

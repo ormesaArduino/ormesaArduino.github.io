@@ -35,6 +35,7 @@
 <a href=  "javascript:void(0)" class="dropbtn">Component Guides</a>
 <div class= "dropdown-content">
   <a href = "RGB LED.html">Multi-Colored LED</a>
+  <a href = "Servos.html">Servo Motors</a>
 </div>
 </li>
 
@@ -94,20 +95,7 @@
   <img src = "Images/DimmerDigital.png" height = 300px>
   <p style="clear:both;">
   <p>Next, type the following code into the Arduino IDE and click upload: </p>
-<code class = "txt"><pre>
-int ledPin = 11;
-
-<span style = "color: blue;">void</span> setup(){
-  pinMode(ledPin, OUTPUT);
-}
-
-<span style = "color: blue;">void</span> loop(){
-  analogWrite(ledPin, 100);
-  delay(750);
-  analogWrite(ledPin, 255);
-  delay(750);
-}
-</pre></code>
+<iframe src=https://create.arduino.cc/editor/ormesa-eb/ea7c7ca8-7d83-452f-9fb2-1bcd766158a7/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
   <h3> Challenge </h3>
   <p>
   Now that you know how to use PWM, connect a potentiometer and an LED to the Arduino. Write a program that will make the LED dimmer or brighter depending on how far the potentiometer is turned. <br>

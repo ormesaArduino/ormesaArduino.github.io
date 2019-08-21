@@ -35,6 +35,7 @@
 <a href=  "javascript:void(0)" class="dropbtn">Component Guides</a>
 <div class= "dropdown-content">
   <a href = "RGB LED.html">Multi-Colored LED</a>
+  <a href = "Servos.html">Servo Motors</a>
 </div>
 </li>
     </ul>
@@ -203,23 +204,11 @@
 <h4> Code </h4>
 <p>To enter the code, open the Arduino IDE or another Arduino code editor. Before you do anything, in the selection bar at the top left, scroll over “Tools > Board” then click “Arduino Genuino Uno”. Next, scroll over “Tools > Ports” Then select the port that has “Arduino Genuino Uno” in parentheses. Next, enter the code and click “upload”. It should be the arrow pointing to the right. </p>
 
-<pre><code class = "txt">
-//The setup function runs once, it sets up for the main program
-<span style = "color: blue;">void </span>setup(){
-  pinMode(3, OUTPUT);
-}
-
-//The loop function runs over and over again, this is your main program
-<span>void </span>loop(){
-  digitalWrite(3,HIGH);
-  delay (500);
-  digitalWrite(3,LOW);
-  delay (500);
-}
-</code></pre>
+<iframe src=https://create.arduino.cc/editor/ormesa-eb/3618e8fc-c95c-41d6-a969-9b077e5f4bf2/preview?embed style="height:510px;width:80%;margin:10px 0" frameborder=0></iframe>
 <p> This is what it looks like on the computer screen: </p>
 <img src = "Images/BlinkCode1.png" height = 300px>
 <h4> Exploring the Code </h4>
+<p>Discuss the following questions with your group:</p>
 <div class = "questions">
 <ol class = "a">
   <li> Change the number in “delay” from 500 to 1000 and reupload the code. What happens? <br> <br></li>
@@ -231,21 +220,9 @@
 </div>
 <p> Now let’s add another light. Follow steps 1-4 on page 2 and 3 again in a different spot on the breadboard. This time, in step 4, connect the wire to pin 5 instead of pin 3.  Look at the code below, how does the wiring change?  What pins are wires connected to? </p>
 <h4> Code </h4>
-<pre><code class = "txt">
-<span style = "color: blue;">void</span> setup(){
-  pinMode(3, OUTPUT);
-}
-
-<span style = "color: blue;">void</span> loop(){
-  digitalWrite(3,HIGH);
-  digitalWrite(5,LOW);
-  delay (500);
-  digitalWrite(5,HIGH);
-  digitalWrite(3,LOW);
-  delay(500);
-}
-</code></pre>
+<iframe src=https://create.arduino.cc/editor/ormesa-eb/6ddb76fc-537b-4cd3-832a-0bbc1f872e2a/preview?embed style="height:510px;width:80%;margin:10px 0" frameborder=0></iframe>
 <h4> Exploring the Code </h4>
+<p>Discuss the following questions with your group:</p>
 <div class = "questions">
 <ol class = "a">
   <li> Why is the light different for pin 3 and for pin 5?  What is the problem with the code? What needs to be added to the setup? <br> <br> </li>

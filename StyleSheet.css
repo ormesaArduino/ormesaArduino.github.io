@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap);
+
 @font-face {
   font-family: Montserrat;
   src: url(Montserrat-Regular.otf);
@@ -6,6 +8,7 @@
   font-family: liberata;
   src: url(LiberataBook.otf);
 }
+
 html{
   background-color: #fffff0;
 }
@@ -46,7 +49,7 @@ h4{
 }
 p{
   font-size: 18px;
-  font-family: liberata;
+  font-family: Noto Sans TC;
 }
 code.txt {
   font-size: 15px;
@@ -62,9 +65,9 @@ code.head {
 
 /*list*/
 ol.a{
+  font-family: Noto Sans TC;
   list-style-type: decimal;
   font-size: 18px;
-  font-style: liberata;
 }
 
 /* top bar */

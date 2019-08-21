@@ -35,6 +35,7 @@
 <a href=  "javascript:void(0)" class="dropbtn">Component Guides</a>
 <div class= "dropdown-content">
   <a href = "RGB LED.html">Multi-Colored LED</a>
+  <a href = "Servos.html">Servo Motors</a>
 </div>
 </li>
 
@@ -73,29 +74,13 @@
       <p>In void loop(), you will need to use the analogWrite(); function for each led color to determine how much of each color you want to show. In order to make the LED shine a specific color you will need the RGB code of that color. For example, the RGB code for midnight blue is 25-25-112. This means that the red LED should be set at a brightness of 25, the green LED should be set to a brightness of 25, and the blue led should be set to a brightness of 112. In the code, this will look like this:</p>
 <code class = "txt"><pre>
 <span style = "color:blue;">void</span> loop(){
-	analogWrite(redLED, 25);
-	analogWrite(greenLED, 25);
-	analogWrite(blueLED, 112);
+  analogWrite(redLED, 25);
+  analogWrite(greenLED, 25);
+  analogWrite(blueLED, 112);
 }
 </pre></code>
 <h3>Sample Code</h3>
-<code class = "txt"><pre>
-<span style = "color: blue;">int</span> redLED = 11;
-<span style = "color: blue;">int</span> blueLED = 10;
-<span style = "color: blue;">int</span> greenLED = 9; //Variables for LED pin numbers
-
-<span style = "color:blue;">void</span> setup(){
-  pinMode(redLED, OUTPUT);
-  pinMode(blueLED, OUTPUT);
-  pinMode(greenLED, OUTPUT); //Set each color to OUTPUT
-}
-
-<span style = "color:blue;">void</span> loop(){
-  analogWrite(redLED, 25); //Red: 25
-  analogWrite(greenLED, 25); //Green: 25
-  analogWrite(blueLED, 112); //Blue: 112
-}
-</pre></code>
+<iframe src=https://create.arduino.cc/editor/ormesa-eb/3fbaf639-6e9d-467d-8dfe-2ba05766dd2c/preview?embed style="height:510px;width:80%;margin:10px 0" frameborder=0></iframe>
 <p>After running this code, you should see the led turn a midnight blue color. Try looking up the RGB code of your favorite color online. Change the red, green and blue values in your code to the values that you found (red is the first number in the code, green is the second number, red is the third number).</p>
     </div>
   </body>
