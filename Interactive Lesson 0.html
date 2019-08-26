@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="StyleSheet.css">
+</head>
+<title> Interactive Lesson 0 </title>
+<body>
+    <div class = "title">
+      <div class = "container">
+        <img src = "Images/OREGON-MESA.jpg" height = "50">
+        <button onclick="window.location.href = 'index.html';" class = "btn"> </button>
+      </div>
+      <h1> MESA Arduino Help </h1>
+      <ul>
+          <li class=  "dropdown">
+            <a href=  "index.html" class="dropbtn"> Home </a>
+          </li>
+          <li class=  "dropdown">
+        <a href=  "javascript:void(0)" class="dropbtn">Interactive Lessons</a>
+        <div class= "dropdown-content">
+          <a href = "Interactive Lesson 0.html">Interactive Lesson 0: Introduction</a>
+          <a href = "Interactive Lesson 1.html">Interactive Lesson 1: Blink</a>
+          <a href = "Interactive Lesson 2.html">Interactive Lesson 2: Sensors</a>
+        </div>
+      </li>
+        <li class=  "dropdown">
+      <a href=  "javascript:void(0)" class="dropbtn">Advanced Lessons</a>
+      <div class= "dropdown-content">
+        <a href = "Variables and Control Structures.html">RECOMMENDED: Variables/Control Structures</a>
+        <a href = "Libraries.html">Advanced: Libraries</a>
+        <a href = "Functions.html"> Advanced: Functions </a>
+        <a href = "PWM.html"> Advanced: PWM </a>
+      </div>
+    </li>
+    <li class=  "dropdown">
+  <a href=  "javascript:void(0)" class="dropbtn">Component Guides</a>
+  <div class= "dropdown-content">
+    <a href = "RGB LED.html">Multi-Colored LED</a>
+    <a href = "Servos.html">Servo Motors</a>
+  </div>
+  </li>
+    </ul>
+  </div>
+    <div class = "text" style = "float: right;">
+      <h2>Arduino Interactive Lesson 0: What is Arduino?</h2>
+      <p>An Arduino is a small computer that can control devices like LED lights, LCD screens, and motors and read information from devices like light sensors and other kinds of sensors. You can think of an Arduino like a brain: your brain can take in information from your eyes, ears, nose, etc. and process it in a way you can understand. Your brain (you) decides what to do with that information. Similarly, an Arduino takes in information from sensors, processes it using your Arduino code, then controls devices like LEDs and motors based on that information.</p>
+        <a target = "_blank" href = "Images-Original/ArduinoAnnotated.jpg">
+          <img class = "img1" src = "Images/ArduinoAnnotated.jpg" height = "225px">
+        </a>
+      <h3>Anatomy of an Arduino</h3>
+      <p>The Arduino has spots for wires called pins. These are the black bars/holes on the sides of the Arduino. Each pin has a white label to its side telling you what it’s purpose is. The 5V, 3.3V, and GND pins are for power. The pins numbered 0 through 13 are called digital pins and the pins numbered a0 through a5 are called analog pins. An Arduino also has a USB port so you can connect it to a computer and upload code, a small reset button to reset the code on the board, and a power port that can be plugged into a battery holder or wall plugin.</p>
+      <h4>Power Pins</h4>
+      <p>The power pins on an Arduino are like batteries: they supply power to the components connected to your Arduino . The 5V and 3.3V pins are like the positive end of a battery and send a stream of power (either 5 volts or 3.3 volts respectively) through the pin. The 5V and 3.3V pins are always on and cannot be turned off in code. This means that you cannot make a light blink with these pins, but you can turn one on. The GND pins are like the negative end of a battery and receive power so that each component can create a complete circuit.</p>
+      <h4>Input/Output Pins</h4>
+      <p>There are two types of input/output pins on the Arduino, digital (pins 0-13) and analog (pins A0-A5). Digital pins are like light switches: light switches can be flipped either on or off.  Digital pins work the same way: they can be turned either on or off within your code. Digital pins can also read whether or not power is going to the pin. This can be useful if you want to read whether a sensor like a button is being pressed/activated or not, but cannot be used to read a sensor that has more than 2 states (like a knob or a slider). <br> <br>
+      Analog pins are for devices like light dimmers. Light dimmers can make lights get brighter or darker and have more options than on or off. Analog pins can read sensors that are not just on/off and have several states like knobs, sliders, and light sensors. It is important to note that analog pins can only be used for inputs like sensors and cannot be used for outputs like lights and motors.</p>
+      <h3>What is a Breadboard?</h3>
+      <a target = "_blank" href = "Images-Original/BreadboardNoBack.jpg">
+        <img class = "img1" src = "Images/BreadboardNoBack.jpg" height = "250px">
+      </a>
+      <p>A breadboard is a device that can be used to wire electronics together without needing to solder them together (permanently fuse the pieces together). A breadboard usually has two sets of rails on the sides. These rails run power up and down; we will refer to these in the future as columns. This means that the wires that are connected to a column are all connected to each other. Typically, the red column labelled ‘+’ is used for power (so a wire runs from 5V on the Arduino to a point on the ‘+’ column) and the blue/black column labelled ‘-’ is used for ground (so a wire runs from GND on the Arduino to a point on the column). In the middle of the breadboard, power runs left and right. This means that all of the wires in a row are connected to each other. You can see how this works exactly in the image above. Each of the bars in the image is simply a piece of metal that connects a row or column together.</p>
+
+      <h3>Activity: The Basic Circuit </h3>
+      <p>In this activity, you will construct a circuit with the Arduino that will turn on an LED. </p>
+      <h4> Materials Needed: </h4>
+
+    <div class="gallery">
+      <a target="_blank" href="Images-Original/Redboard.jpg">
+        <img src="Images/Redboard.jpg" width="200" height="200">
+      </a>
+      <div class="desc">Arduino board</div>
+    </div>
+
+    <div class="gallery">
+      <a target="_blank" href="Images-Original/Breadboard.jpg">
+      <img src="Images/Breadboard.jpg" width="200" height="200">
+      </a>
+      <div class="desc">1 breadboard</div>
+    </div>
+
+    <div class="gallery">
+      <a target="_blank" href="Images-Original/LED.jpg">
+        <img src="Images/LED.jpg" width="200" height="200">
+      </a>
+      <div class="desc"> 1 LED (any color)</div>
+    </div>
+
+    <div class="gallery">
+      <a target="_blank" href="Images-Original/Resistor.jpg">
+        <img src="Images/Resistor.jpg" width="200" height="200">
+      </a>
+      <div class="desc">1 330 ohm resistor</div>
+    </div>
+
+    <div class="gallery">
+      <a target="_blank" href="Images-Original/Wires.jpg">
+        <img src="Images/Wires.jpg" width="200" height="200">
+      </a>
+      <div class="desc">2 black wires and 1 red wire</div>
+    </div>
+    <div class="gallery">
+      <a target="_blank" href="Images-Original/USB.jpg">
+        <img src="Images/USB.jpg" width="200" height="200">
+      </a>
+      <div class="desc">1 connector cable and 1 computer</div>
+    </div>
+    <br clear = all>
+
+    <h4>Steps</h4>
+    <div class = "steps">
+      <ol class = "a">
+        <li>Put the LED on the breadboard, with the legs in different rows. Remember which end of the LED is the longer side. </li>
+        <div class = "imglink">
+          <a target = "_blank" href = "Images-Original/Step1.jpg">
+            <img src = "Images/Step1.jpg" height = "230px">
+          </a>
+        </div>
+        <div class = "imglink">
+          <a target = "_blank" href = "Images-Original/Step1Digital.png">
+          <img src = "Images/Step1Digital.png" height = "230px">
+        </a>
+        </div>
+      <br clear = all>
+        <li>Attach one end of the black (or cool colored) wire to a GND pin on the Arduino and the other end to the column with the “-” symbol.</li>
+        <div class = "imglink">
+          <a target = "_blank" href = "Images-Original/Step2.jpg">
+            <img src = "Images/Step2.jpg" height = "230px">
+          </a>
+        </div>
+        <div class = "imglink">
+          <a target = "_blank" href = "Images-Original/Step2Digital.png">
+          <img src = "Images/Step2Digital.png" height = "230px">
+        </a>
+        </div>
+        <br clear = all>
+        <li>Attach one end of a red (or hot colored) wire to the 5V pin and the other end to the column with the “+” symbol.</li>
+        <div class = "imglink">
+          <a target = "_blank" href = "Images-Original/Step3.jpg">
+            <img src = "Images/Step3.jpg" height = "230px">
+          </a>
+        </div>
+        <div class = "imglink">
+          <a target = "_blank" href = "Images-Original/Step3Digital.png">
+          <img src = "Images/Step3Digital.png" height = "230px">
+        </a>
+        </div>
+        <br clear = all>
+        <li>Connect one end of the resistor to the same row as the shorter end of the LED and the other end to the column with the “-” symbol.</li>
+        <div class = "imglink">
+          <a target = "_blank" href = "Images-Original/Step4.jpg">
+            <img src = "Images/Step4.jpg" height = "230px">
+          </a>
+        </div>
+        <div class = "imglink">
+          <a target = "_blank" href = "Images-Original/Step4Digital.png">
+          <img src = "Images/Step4Digital.png" height = "230px">
+        </a>
+        </div>
+        <br clear = all>
+        <li>Connect one end of the other red wire to the same row as the longer end of the LED and the other end to the column with the “+” symbol on the Arduino. Now plug the Arduino into your computer with the connector cable. The LED should turn on.</li>
+        <div class = "imglink">
+          <a target = "_blank" href = "Images-Original/Step5.jpg">
+            <img src = "Images/Step5.jpg" height = "230px">
+          </a>
+        </div>
+        <div class = "imglink">
+          <a target = "_blank" href = "Images-Original/Step5Digital.png">
+            <img src = "Images/Step5Digital.png" height = "230px">
+          </a>
+        </div>
+          <br clear = all>
+        </ol>
+      </div>
+
+    <p>Trace the circuit with your finger, starting at the 5V pin.  Notice how the electricity travels through each component and ends back at the Arduino, creating a circle.  If the circle (circuit) is broken anywhere, the LED will turn off. </p>
+    </div>
+  </body>
+</html>

@@ -138,11 +138,12 @@ div.questions{
   width: 100%;
   padding: 3px;
   padding-top: 1px;
+  padding-bottom: 1px;
 }
 
 /* Image Gallery */
 div.gallery {
-  margin: 20px;
+  margin: 10px;
   border: 1px solid #ccc;
   width: 180px;
   float: left;
@@ -219,12 +220,6 @@ div.imglink:hover{
       float: left;
   }
 
-  @media screen and (max-width: 730px) {
-    .dropdown{
-      display: none !important;
-    }
-  }
-
   .dropdown-content {
       display: none;
       position: absolute;
@@ -245,10 +240,6 @@ div.imglink:hover{
   display: inline-block;
   position: relative;
   margin-top: 10px;
-}
-@media screen and (min-width: 730px){
-.dropdownP {
-  display: none !important;
 }
 
 }

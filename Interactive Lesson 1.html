@@ -18,6 +18,7 @@
       <li class=  "dropdown">
         <a href=  "javascript:void(0)" class="dropbtn">Interactive Lessons</a>
         <div class= "dropdown-content">
+          <a href = "Interactive Lesson 0.html">Interactive Lesson 0: Introduction</a>
           <a href = "Interactive Lesson 1.html">Interactive Lesson 1: Blink</a>
           <a href = "Interactive Lesson 2.html">Interactive Lesson 2: Sensors</a>
         </div>
@@ -42,167 +43,67 @@
   </div>
   <div class = "text">
   <h2>Arduino Interactive Lesson 1: Blink an LED </h2>
-  <h3>Activity 1: The Basic Circuit </h3>
-  <p>In this activity, you will construct a circuit with the Arduino that will turn on an LED. </p>
-  <h4> Materials Needed: </h4>
 
-<div class="gallery">
-  <a target="_blank" href="Images-Original/Redboard.jpg">
-    <img src="Images/Redboard.jpg" width="200" height="200">
-  </a>
-  <div class="desc">Arduino board</div>
-</div>
-
-<div class="gallery">
-  <a target="_blank" href="Images-Original/Breadboard.jpg">
-  <img src="Images/Breadboard.jpg" width="200" height="200">
-  </a>
-  <div class="desc">1 breadboard</div>
-</div>
-
-<div class="gallery">
-  <a target="_blank" href="Images-Original/LED.jpg">
-    <img src="Images/LED.jpg" width="200" height="200">
-  </a>
-  <div class="desc"> 1 LED (any color)</div>
-</div>
-
-<div class="gallery">
-  <a target="_blank" href="Images-Original/Resistor.jpg">
-    <img src="Images/Resistor.jpg" width="200" height="200">
-  </a>
-  <div class="desc">1 330 ohm resistor</div>
-</div>
-
-<div class="gallery">
-  <a target="_blank" href="Images-Original/Wires.jpg">
-    <img src="Images/Wires.jpg" width="200" height="200">
-  </a>
-  <div class="desc">2 black wires and 1 red wire</div>
-</div>
-
-<br clear = all>
-
-<h4> Steps (see image below): </h4>
-<div class = "steps">
-  <ol class = "a">
-    <li>Put the LED on the breadboard, with the legs in different rows (see picture). Remember which end of the LED is the longer side.</li>
-    <li>Attach one end of the 330 Ohm resistor in the same row as the longer end of the LED, put the other end in a different row. (IMPORTANT: The resistor prevents the LED from getting too much voltage, if it is not used the LED will break and no longer work).</li>
-    <li>Attach one end of the red wire to 5V and the other end to the row with the resistor. </li>
-    <li>Complete the circuit, attach the black wire to the ground pin (GND) on the Arduino, and to the row with the short wire from the LED. Plug the Arduino into the computer. </li>
-  </ol>
-</div>
-
-<div class = "imglink">
-  <a target = "_blank" href = "Images-Original/5V.png">
-    <img src = "Images/5V.png" height = "230px">
-  </a>
-</div>
-<div class = "imglink">
-  <a target = "_blank" href = "Images-Original/5VDigital.png">
-  <img src = "Images/5VDigital.png" height = "230px">
-</a>
-</div>
-<br clear = all>
-
-<p>Trace the circuit with your finger, starting at the 5V pin.  Notice how the electricity travels through each component and ends back at the Arduino, creating a circle.  If the circle (circuit) is broken anywhere, the LED will turn off. </p>
-<h3> Activity 2: The Basic Blink Code </h3>
-<p> In this activity, you will connect an LED to the Arduino and make it blink. You can always connect an LED to the Arduino in the same way as described below (just change the wire from pin 3 to whichever pin you want the LED to be in). </p>
-<h4>Supplies needed: </h4>
-
-<div class="gallery">
-<a target="_blank" href="Images-Original/Redboard.jpg">
-  <img src="Images/Redboard.jpg" width="200" height="200">
-</a>
-<div class="desc">Arduino board</div>
-</div>
-
-<div class="gallery">
-<a target="_blank" href="Images-Original/Breadboard.jpg">
-<img src="Images/Breadboard.jpg" width="200" height="200">
-</a>
-<div class="desc">1 breadboard</div>
-</div>
-
-<div class="gallery">
-<a target="_blank" href="Images-Original/LED.jpg">
-  <img src="Images/LED.jpg" width="200" height="200">
-</a>
-<div class="desc"> 1 LED (any color)</div>
-</div>
-
-<div class="gallery">
-<a target="_blank" href="Images/Resistor.jpg">
-  <img src="Images/Resistor.jpg" width="200" height="200">
-</a>
-<div class="desc">1 330 ohm resistor</div>
-</div>
-
-<div class="gallery">
-<a target="_blank" href="Images/Wires.jpg">
-<img src="Images/Wires.jpg" width="200" height="200">
-</a>
-<div class="desc">1 black wire and 1 red wire</div>
-</div>
-
-<br clear = all>
-
+<h3> Activity: The Basic Blink Code </h3>
+<p> In this activity, you will connect an LED to the Arduino and make it blink. You can always connect an LED to the Arduino in the same way as described below (in step 4, just change the wire from pin 3 to whichever pin you want the LED to be in). </p>
 <h4> Circuit </h4>
+<h4>Steps</h4>
 <div class = "steps">
   <ol class = "a">
-    <li>Connect one end of the wire to the GND pin and the other end to the blue ‘-’ column on the breadboard.</li>
+    <li>Put the LED on the breadboard, with the legs in different rows. Remember which end of the LED is the longer side.</li>
     <div class = "imglink">
-      <a target = "_blank" href = "Images/Step1.png">
-        <img src = "Images/Step1.png" height = "230px">
+      <a target = "_blank" href = "Images-Original/Step1.jpg">
+        <img src = "Images/Step1.jpg" height = "230px">
       </a>
     </div>
     <div class = "imglink">
-      <a target = "_blank" href = "Images/Step1Digital.png">
+      <a target = "_blank" href = "Images-Original/Step1Digital.png">
       <img src = "Images/Step1Digital.png" height = "230px">
     </a>
     </div>
   <br clear = all>
-    <li>Attach one end of the 330 Ohm resistor in the same row as the longer end of the LED, put the other end in a different row. (IMPORTANT: The resistor prevents the LED from getting too much voltage, if it is not used the LED will break and no longer work).</li>
+    <li>Attach one end of the black (or cool colored) wire to a GND pin on the Arduino and the other end to the column with the '-' symbol.</li>
     <div class = "imglink">
-      <a target = "_blank" href = "Images/Step2.png">
-        <img src = "Images/Step2.png" height = "230px">
+      <a target = "_blank" href = "Images-Original/Step2.jpg">
+        <img src = "Images/Step2.jpg" height = "230px">
       </a>
     </div>
     <div class = "imglink">
-      <a target = "_blank" href = "Images/Step2Digital.png">
+      <a target = "_blank" href = "Images-Original/Step2Digital.png">
       <img src = "Images/Step2Digital.png" height = "230px">
     </a>
     </div>
     <br clear = all>
-    <li>Attach one end of the red wire to 5V and the other end to the row with the resistor. </li>
+    <li>Connect one end of the resistor to the same row as the <b>shorter</b> end of the LED and the other end to the column with the '-' symbol.</li>
     <div class = "imglink">
-      <a target = "_blank" href = "Images/Step3.png">
-        <img src = "Images/Step3.png" height = "230px">
+      <a target = "_blank" href = "Images-Original/Step3Blink.jpg">
+        <img src = "Images/Step3Blink.jpg" height = "230px">
       </a>
     </div>
     <div class = "imglink">
-      <a target = "_blank" href = "Images/Step3Digital.png">
-      <img src = "Images/Step3Digital.png" height = "230px">
+      <a target = "_blank" href = "Images-Original/Step3BlinkDigital.png">
+      <img src = "Images/Step3BlinkDigital.png" height = "230px">
     </a>
     </div>
     <br clear = all>
-    <li>Complete the circuit, attach the black wire to the ground pin (GND) on the Arduino, and to the row with the short wire from the LED. Plug the Arduino into the computer. </li>
+    <li>Connect one end of the other red wire to the same row as the <b>longer</b> end of the LED and the other end to digital pin 3 on the Arduino. Now plug the Arduino into your computer with the connector cable.</li>
     <div class = "imglink">
-      <a target = "_blank" href = "Images-Original/Step4.png">
-        <img src = "Images/Step4.png" height = "230px">
+      <a target = "_blank" href = "Images-Original/Step4BlinkDigital.jpg">
+        <img src = "Images/Step5.jpg" height = "230px">
       </a>
     </div>
     <div class = "imglink">
-      <a target = "_blank" href = "Images-original/Step4Digital.png">
-      <img src = "Images/Step4Digital.png" height = "230px">
-    </a>
+      <a target = "_blank" href = "Images-Original/Step4BlinkDigital.png">
+        <img src = "Images/Step4BlinkDigital.png" height = "230px">
+      </a>
     </div>
-    <br clear = all>
-  </ol>
-</div>
+      <br clear = all>
+    </ol>
+  </div>
+
 
 <h4> Code </h4>
-<p>To enter the code, open the Arduino IDE or another Arduino code editor. Before you do anything, in the selection bar at the top left, scroll over “Tools > Board” then click “Arduino Genuino Uno”. Next, scroll over “Tools > Ports” Then select the port that has “Arduino Genuino Uno” in parentheses. Next, enter the code and click “upload”. It should be the arrow pointing to the right. </p>
+<p>To enter the code, open the Arduino IDE or another Arduino code editor on your computer. Before you do anything, in the selection bar at the top left, scroll over “Tools > Board” then click “Arduino Genuino Uno”. Next, scroll over “Tools > Ports” then select the port that has “Arduino Genuino Uno” in parentheses. (note: you <b>must</b> do this or you will get the error “error uploading to board”) Next, enter or copy/paste the code and click “upload”. It should be the arrow pointing to the right.</p>
 
 <iframe src=https://create.arduino.cc/editor/ormesa-eb/3618e8fc-c95c-41d6-a969-9b077e5f4bf2/preview?embed style="height:510px;width:80%;margin:10px 0" frameborder=0></iframe>
 <p> This is what it looks like on the computer screen: </p>
@@ -218,7 +119,7 @@
   <li> Once you know what each line does, leave a comment next to each line of code explaining it (inside the code editor). To leave a comment, write ‘//’ before typing. If you have questions about what each function does, ask your MESA advisor or mentor. <br> <br> </li>
 </ol>
 </div>
-<p> Now let’s add another light. Follow steps 1-4 on page 2 and 3 again in a different spot on the breadboard. This time, in step 4, connect the wire to pin 5 instead of pin 3.  Look at the code below, how does the wiring change?  What pins are wires connected to? </p>
+<p> Now let’s add another light. Follow steps 1-4 again in a different spot on the breadboard. This time, in step 4, connect the wire to pin 5 instead of pin 3.  Look at the code below, how does the wiring change?  What pins are wires connected to? </p>
 <h4> Code </h4>
 <iframe src=https://create.arduino.cc/editor/ormesa-eb/6ddb76fc-537b-4cd3-832a-0bbc1f872e2a/preview?embed style="height:510px;width:80%;margin:10px 0" frameborder=0></iframe>
 <h4> Exploring the Code </h4>
@@ -231,7 +132,6 @@
 </div>
 <h3> Challenges: </h3>
 <ol class = "a">
-  <p>If you have extra time after completing lesson 1 and 2, you may work on the following challenges:</p>
   <li> Figure out how to wire and code a stoplight with red, green, and yellow LEDs (if you don’t have yellow, you can use a blue LED in its place).  Remember that you will need 3 OUTPUTs. <br> </li>
   <li> Have fun making multiple lights blink! Can you make the blink to the beat of one of the songs you like? <br> </li>
 </ol>
