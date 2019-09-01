@@ -5,54 +5,73 @@
 </head>
 <title> </title>
 <body>
-    <div class = "title">
-      <div class = "container">
-        <img src = "Images/OREGON-MESA.jpg" height = "50px">
-        <button onclick="window.location.href = 'MESA Main Site.html';" class = "btn"> </button>
-      </div>
-      <h1> MESA Arduino Help </h1>
-      <ul>
-          <li class=  "dropdown">
-            <a href=  "MESA Main Site.html" class="dropbtn"> Home </a>
-          </li>
-          <li class=  "dropdown">
-        <a href=  "javascript:void(0)" class="dropbtn">Interactive Lessons</a>
-        <div class= "dropdown-content">
-          <a href = "Interactive Lesson 0.html">Interactive Lesson 0: Introduction</a>
-          <a href = "Interactive Lesson 1.html">Interactive Lesson 1: Blink</a>
-          <a href = "Interactive Lesson 2.html">Interactive Lesson 2: Sensors</a>
-        </div>
-      </li>
+  <div class = "title">
+    <div class = "container">
+      <img src = "Images/OREGON-MESA.jpg" height = "50">
+      <button onclick="window.location.href = 'index.html';" class = "btn"> </button>
+    </div>
+    <h1> MESA Arduino Help </h1>
+    <ul>
         <li class=  "dropdown">
-      <a href=  "javascript:void(0)" class="dropbtn">Advanced Lessons</a>
+          <a class = "menu" href=  "index.html" class="dropbtn"> Home </a>
+        </li>
+        <li class=  "dropdown">
+      <a class = "menu" href=  "javascript:void(0)" class="dropbtn">Interactive Lessons</a>
       <div class= "dropdown-content">
-        <a href = "Libraries.html">Advanced: Libraries</a>
-        <a href = "Functions.html"> Advanced: Functions </a>
-        <a href = "PWM.html"> Advanced: PWM </a>
+        <a class = "menu" href = "Interactive Lesson 0.html">Interactive Lesson 0: Introduction</a>
+        <a class = "menu" href = "Interactive Lesson 1.html">Interactive Lesson 1: Blink</a>
+        <a class = "menu" href = "Interactive Lesson 2.html">Interactive Lesson 2: Sensors</a>
       </div>
     </li>
-    <li class=  "dropdown">
-  <a href=  "javascript:void(0)" class="dropbtn">Component Guides</a>
-  <div class= "dropdown-content">
-    <a href = "RGB LED.html">Multi-Colored LED</a>
-    <a href = "Servos.html">Servo Motors</a>
-  </div>
+      <li class=  "dropdown">
+    <a class = "menu" href=  "javascript:void(0)" class="dropbtn">Advanced Lessons</a>
+    <div class= "dropdown-content">
+      <a class = "menu" href = "Variables and Control Structures.html">RECOMMENDED: Variables/Control Structures</a>
+      <a class = "menu" href = "Libraries.html">Advanced: Libraries</a>
+      <a class = "menu" href = "Functions.html"> Advanced: Functions </a>
+      <a class = "menu" href = "PWM.html"> Advanced: PWM </a>
+    </div>
   </li>
   <li class=  "dropdown">
-    <a href=  "External Links.html" class="dropbtn"> External Links</a>
-  </li>
-    </ul>
-  </div>
+<a class = "menu" href=  "javascript:void(0)" class="dropbtn">Component Guides</a>
+<div class= "dropdown-content">
+  <a class = "menu" href = "RGB LED.html">Multi-Colored LED</a>
+  <a class = "menu" href = "Servos.html">Servo Motors</a>
+</div>
+</li>
+<li class = "dropdown">
+  <a class = "menu" href=  "External Links.html" class="dropbtn"> External Links</a>
+</li>
+  </ul>
+</div>
     <div class = "text">
     <h2> External Links </h2>
-    <p>
-      Here is a link to download the Arduino editor on your computer:
-      <a class = "link" href = "https://www.arduino.cc/en/Main/Software"> Arduino IDE </a>
-      <br><br> If this program does not work with your computer (or if you are using a Chromebook) you can use Arduino's web editor:
-      <a class = "link" href = "https://create.arduino.cc/"> Arduino Create </a>
-      <br><br> Or codebender:
-      <a class = "link" href = "https://codebender.cc/register/"> Codebender </a>
-    </p>
+    <h3 style = "color: red;"> Code Builders: </h3>
+    <div class = "link">
+      <a href = "https://www.arduino.cc/en/Main/Software"> Arduino IDE Software </a>
+      <p> Download the Arduino Editor software onto your computer. </p>
+    </div>
+    <div class = "link" style = "margin-bottom: 10px;">
+      <a href = "https://www.google.com/url?q=https%3A%2F%2Fcreate.arduino.cc%2F&sa=D&sntz=1&usg=AFQjCNHZYDeIx5Nfq45joEZF9KmOS3NPDA"> Arduino Create Editor </a>
+      <p> If you can't download the IDE Software,  or if you are using a Chromebook, you can use the Arduino Create online.  </p>
+    </div>
+    <h3 style = "color: red;">Arduino PDF Guide</h3>
+    <iframe src="https://drive.google.com/file/d/1sDoEOUleFRjGH5AjtN8It2efWxw2UJnd/preview" width="900" height="600"></iframe>
+    <h4 style = "color: red; font-size: 24px;"> Use the <a href = "https://www.google.com/url?q=https%3A%2F%2Fwww.arduino.cc%2Freference%2Fen%2F&sa=D&sntz=1&usg=AFQjCNGSgnsegxAHAMqasxHOX5szf65auA" style = "color:inherit;"><u>Arduino Reference</u></a> page to get a better understanding of how to code your Arduino </h4>
+    <p> There are three main (and most useful) sections of the Arduino Reference page: Structure, Functions, Variables </p>
+    <p><b>Structure:</b> This section will tell you all about the logic and the way that the Arduino thinks. Arduino can be very finicky, so understanding how it thinks can help you figure out the bugs in your code way easier! <code style = "background-color: lightgrey;">if</code> and <code style = "background-color: lightgrey;">while</code> loops are very important and I suggest reviewing them before starting to write your own codes.</p>
+    <p><b>Functions:</b> This section will tell you all about the different functions you can use to program your Arduino. It has detailed notes on everything from a basic <code style = "background-color: lightgrey;">delay()</code> function to some more complicated functions like <code style = "background-color: lightgrey;">interrupts()</code>.</p>
+    <p><b>Variables:</b> This section tells you about all the different types of Variables you can use to hold values in your Arduino. We use int and float for almost everything we will be programming. </p>
+    <h4 style = "color: red; font-size: 24px;"> Example Arduino Tutorials </h4>
+    <p> You can find a lot of built in <a style = "color:red;" href = "https://www.google.com/url?q=https%3A%2F%2Fwww.arduino.cc%2Fen%2FTutorial%2FBuiltInExamples&sa=D&sntz=1&usg=AFQjCNFhUUGjlnnp96EBG-5dKnowXfxNrA">tutorials</a> that will help you, step by step, complete some Arduino projects. This is very helpful if you want to learn how to use certain sensors or motors in a practical way.</p>
+    <h4 style = "color: red; font-size: 24px;"> Video Introductions for Beginners </h4>
+    <p>Here are 3 sections of videos that give a good introduction into Arduino and some of its essential functions: <a style = "color:red;" href = "https://www.youtube.com/playlist?list=PLYutciIGBqC34bfijBdYch49oyU-B_ttH">Section 1</a>, <a style = "color:red;" href = "https://www.youtube.com/playlist?list=PLYutciIGBqC2rqlBw3wVX4LjFlcjtWjGP">Section 2</a>, <a style = "color: red;" href = "https://www.youtube.com/playlist?list=PLYutciIGBqC3G-aYvIvpb7RhRz4iCCyIb">Section 3</a></p>
+    <h4 style = "color: red; font-size: 24px;">Explore</h4>
+    <p> The TinkerCad website has a cool simulation function where you can create circuits and actually code them to work. Here are some examples that were created by a MESA Student!  <a style = "color:red;" href = "https://www.google.com/url?q=https%3A%2F%2Fwww.tinkercad.com%2Fthings%2F5jueeHsvIWU-ledblink%2Feditel&sa=D&sntz=1&usg=AFQjCNF2ox96k3Yr8Bp3x8XpvH5iAiAPcg">Button with LED</a>, <a style = "color:red;" href ="https://www.google.com/url?q=https%3A%2F%2Fwww.tinkercad.com%2Fthings%2FeaNCt0L18g0-photoresistor%2Feditel&sa=D&sntz=1&usg=AFQjCNFhU2ZSx75-4uiCTu8yR_N4M7Z7Vw">Photoresistor with LED</a>, <a style = "color:red;" href ="https://www.google.com/url?q=https%3A%2F%2Fwww.tinkercad.com%2Fthings%2F3SI42CoX9mz-potentiometer%2Feditel&sa=D&sntz=1&usg=AFQjCNGLT-MhrHnnehRW5_EWR3bCFUreLQ">Potentiometer</a>, and <a style = "color:red;" href ="https://www.google.com/url?q=https%3A%2F%2Fwww.tinkercad.com%2Fthings%2Fb7fwoBy4Vkx-potentiometer-with-servo%2Feditel&sa=D&sntz=1&usg=AFQjCNGXCTX-9S-Va-piDiEJsSq_Nu8K3w">Potentiometer with Servo.</a> </p>
+    <p>Want to see a giant library of cool sensors and motors for the Arduino? <a style = "color:red;" href = "https://www.google.com/url?q=https%3A%2F%2Fwww.adafruit.com%2F&sa=D&sntz=1&usg=AFQjCNG-lp7i1uiKc0VDc-Ov8YaOqDf8wQ">Adafruit</a> has almost any sensor or motor you could ever need!</p>
+    <p> Free instructables 4 class <a style = "color:red;" href = "https://www.google.com/url?q=https%3A%2F%2Fwww.instructables.com%2Fclass%2FArduino-Class%2F&sa=D&sntz=1&usg=AFQjCNGCK7xO9I1AeMIPThZ1t7ekp8d_OA">course</a>.
+    <p> Check out the blog at <a style = "color:red;" href = "https://bildr.org">bildr.org</a> for ideas, tutorials, and more!</p>
+
     </div>
   </body>
 </html>

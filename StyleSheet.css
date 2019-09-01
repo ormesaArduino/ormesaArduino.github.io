@@ -197,17 +197,28 @@ div.imglink:hover{
     padding: 8px;
   }
 
-  a{
+  a.menu{
   text-decoration:none;
   color: black;
   display: block;
   text-align: left;
-  }
-  a.link{
-    color: blue;
-    display: inline;
-    font-style: liberata;
-  }
+}
+
+div.link{
+  padding: 10px;
+  border-left: solid;
+  border-color: black;
+  border-width: 6px;
+  background-color: rgb(230,230,230);
+}
+div.link a{
+  color: blue;
+  font-family: Lato, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.56;
+}
 
   a:hover {
   color:darkgrey;

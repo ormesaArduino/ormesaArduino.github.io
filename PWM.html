@@ -5,43 +5,45 @@
 </head>
 <title> PWM </title>
 <body>
-    <div class = "title">
-      <div class = "container">
-        <img src = "Images/OREGON-MESA.jpg" height = "50px">
-        <button onclick="window.location.href = 'index.html';" class = "btn"> </button>
+  <div class = "title">
+    <div class = "container">
+      <img src = "Images/OREGON-MESA.jpg" height = "50">
+      <button onclick="window.location.href = 'index.html';" class = "btn"> </button>
+    </div>
+    <h1> MESA Arduino Help </h1>
+    <ul>
+        <li class=  "dropdown">
+          <a class = "menu" href=  "index.html" class="dropbtn"> Home </a>
+        </li>
+        <li class=  "dropdown">
+      <a class = "menu" href=  "javascript:void(0)" class="dropbtn">Interactive Lessons</a>
+      <div class= "dropdown-content">
+        <a class = "menu" href = "Interactive Lesson 0.html">Interactive Lesson 0: Introduction</a>
+        <a class = "menu" href = "Interactive Lesson 1.html">Interactive Lesson 1: Blink</a>
+        <a class = "menu" href = "Interactive Lesson 2.html">Interactive Lesson 2: Sensors</a>
       </div>
-      <h1> MESA Arduino Help </h1>
-      <ul>
-          <li class=  "dropdown">
-            <a href=  "index.html" class="dropbtn"> Home </a>
-          </li>
-          <li class=  "dropdown">
-        <a href=  "javascript:void(0)" class="dropbtn">Interactive Lessons</a>
-        <div class= "dropdown-content">
-          <a href = "Interactive Lesson 0.html">Interactive Lesson 0: Introduction</a>
-          <a href = "Interactive Lesson 1.html">Interactive Lesson 1: Blink</a>
-          <a href = "Interactive Lesson 2.html">Interactive Lesson 2: Sensors</a>
-        </div>
-      </li>
+    </li>
       <li class=  "dropdown">
-    <a href=  "javascript:void(0)" class="dropbtn">Advanced Lessons</a>
+    <a class = "menu" href=  "javascript:void(0)" class="dropbtn">Advanced Lessons</a>
     <div class= "dropdown-content">
-      <a href = "Variables and Control Structures.html">RECOMMENDED: Variables/Control Structures</a>
-      <a href = "Libraries.html">Advanced: Libraries</a>
-      <a href = "Functions.html"> Advanced: Functions </a>
-      <a href = "PWM.html"> Advanced: PWM </a>
+      <a class = "menu" href = "Variables and Control Structures.html">RECOMMENDED: Variables/Control Structures</a>
+      <a class = "menu" href = "Libraries.html">Advanced: Libraries</a>
+      <a class = "menu" href = "Functions.html"> Advanced: Functions </a>
+      <a class = "menu" href = "PWM.html"> Advanced: PWM </a>
     </div>
   </li>
   <li class=  "dropdown">
-<a href=  "javascript:void(0)" class="dropbtn">Component Guides</a>
+<a class = "menu" href=  "javascript:void(0)" class="dropbtn">Component Guides</a>
 <div class= "dropdown-content">
-  <a href = "RGB LED.html">Multi-Colored LED</a>
-  <a href = "Servos.html">Servo Motors</a>
+  <a class = "menu" href = "RGB LED.html">Multi-Colored LED</a>
+  <a class = "menu" href = "Servos.html">Servo Motors</a>
 </div>
 </li>
-
-    </ul>
-  </div>
+<li class = "dropdown">
+  <a class = "menu" href=  "External Links.html" class="dropbtn"> External Links</a>
+</li>
+  </ul>
+</div>
   <div class = "text">
   <h2> How To Use PWM </h2>
   <p> So far, you have turned on and blinked LEDs, but you might be wondering, “how do I make the LED dimmer?” An Arduino can’t change the amount of voltage that comes out of a pin, so it instead uses a concept called PWM (Pulse Width Modulation). PWM is where the Arduino rapidly turns on and off the power for specific intervals of time. For example, it might be on for 75% of the time and off for 25% of the time. This would give the illusion that the LED is dimmer when it is really <i>fully</i> on for 75% of the time. </p>
