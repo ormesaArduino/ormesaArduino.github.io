@@ -45,5 +45,27 @@
   </ul>
 </div>
   <div class = "text">
+    <h2> Piezo Buzzer </h2>
+    <p>A Piezo Buzzer is a device that makes sound. Buzzers can be used for alarms, music makers, or some other device that needs to make sound. On the buzzer, the positive end is the one with the ‘+’ sign over it. over it.</p>
+    <h3> How to Wire a Piezo Buzzer<h3>
+      <p>Wiring a piezo buzzer is wired just like an LED is. Put the buzzer on the breadboard, connect the positive end to a resistor and then to a digital pin on the Arduino, then connect the negative end to the GND pin on the Arduino.</p>
+      <P> IMAGE</p>
+      <h3> How to Code a Piezo Buzzer</h3>
+      <p> To code a buzzer, you will need to use the tone function. The tone function is structured like this:
+	tone(pin #, frequency, time);
+The pin # is the pin on the Arduino that the buzzer is connected to. The frequency is the tone (frequency) that the buzzer will vibrate at in hertz(vibrations per second). The time is the amount of time that you want the tone to play for before stopping in milliseconds. For example, if you want to play a tone that is 500 hertz for 1 second, you would write:
+	tone(8, 500, 1000);
+      </p>
+      <h3> Sample Code 1 </h3>
+      <p> The following code will make the buzzer vibrate at 550 hz for half a second then wait half a second and repeat: </p>
+      <p>int buzzerPin = 8;
+void setup(){
+//Nothing goes in here
+}
+void loop(){
+	tone(buzzerPin, 550, 500);
+	delay(500);
+      </p>
+
   </div>
 </body>
