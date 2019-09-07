@@ -37,6 +37,7 @@
 <div class= "dropdown-content">
   <a class = "menu" href = "RGB LED.html">Multi-Colored LED</a>
   <a class = "menu" href = "Servos.html">Servo Motors</a>
+  <a class = "menu" href = "PiezoBuzzer.html">Piezo Buzzer</a>
 </div>
 </li>
 <li class = "dropdown">
@@ -46,10 +47,20 @@
 </div>
   <div class = "text">
     <h2> Piezo Buzzer </h2>
+    <div style = "float: right; margin-left: 3px;" class = "imglink">
+      <a target = "_blank" href = "Images-Original/Piezo.jpg">
+        <img src = "Images/Piezo.jpg" height = "150px">
+      </a>
+    </div>
     <p>A Piezo Buzzer is a device that makes sound. Buzzers can be used for alarms, music makers, or some other device that needs to make sound. On the buzzer, the positive end is the one with the ‘+’ sign over it. over it.</p>
     <h3> How to Wire a Piezo Buzzer</h3>
       <p>Wiring a piezo buzzer is wired just like an LED is. Put the buzzer on the breadboard, connect the positive end to a resistor and then to a digital pin on the Arduino, then connect the negative end to the GND pin on the Arduino.</p>
-      <P> IMAGE</p>
+      <div style = "display: block;" class = "imglink">
+        <a target = "_blank" href = "Images-Original/PiezoCircuit.jpg">
+          <img style = "display: block;" src = "Images/PiezoCircuit.jpg" height = "300px">
+        </a>
+      </div>
+      <br clear = all>
       <h3> How to Code a Piezo Buzzer</h3>
       <p> To code a buzzer, you will need to use the tone function. The tone function is structured like this:
 	tone(pin #, frequency, time);
@@ -63,6 +74,7 @@ The pin # is the pin on the Arduino that the buzzer is connected to. The frequen
 	    <p>The following code will play the happy birthday song, then wait 10 seconds, then repeat: </p>
 	    <iframe src=https://create.arduino.cc/editor/Yarelitr/8d14f96f-769e-4ba9-8668-dae86432eafd/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 <ol class="a">
+  <h3> Challenge </h3>
 	<li>In sample code #1, try changing the frequency number to higher and higher values. What happens?</Li>
 	    <li> Make the circuit for a button in addition to the buzzer circuit. Now look up the notes to your favorite song and play those notes if the button has been pressed.</Li>
   </div>
