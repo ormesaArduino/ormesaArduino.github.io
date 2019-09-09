@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="StyleSheet.css">
+<link rel ="icon" href = "Images/OMESA.png">
+</head>
+<title> Troubleshooting Guide </title>
+<body>
+  <div class = "title">
+    <div class = "container">
+      <img src = "Images/OREGON-MESA.jpg" height = "50">
+      <button onclick="window.location.href = 'index.html';" class = "btn"> </button>
+    </div>
+    <h1> MESA Arduino Help </h1>
+    <ul>
+        <li class=  "dropdown">
+          <a class = "menu" href=  "index.html" class="dropbtn"> Home </a>
+        </li>
+        <li class=  "dropdown">
+      <a class = "menu" href=  "javascript:void(0)" class="dropbtn">Interactive Lessons</a>
+      <div class= "dropdown-content">
+        <a class = "menu" href = "Interactive Lesson 0.html">Interactive Lesson 0: Introduction</a>
+        <a class = "menu" href = "Interactive Lesson 1.html">Interactive Lesson 1: Blink</a>
+        <a class = "menu" href = "Interactive Lesson 2.html">Interactive Lesson 2: Sensors</a>
+        <a class = "menu" href = "Troubleshooting.html">Troubleshooting Guide</a>
+      </div>
+    </li>
+      <li class=  "dropdown">
+    <a class = "menu" href=  "javascript:void(0)" class="dropbtn">Advanced Lessons</a>
+    <div class= "dropdown-content">
+      <a class = "menu" href = "Variables and Control Structures.html">RECOMMENDED: Variables/Control Structures</a>
+      <a class = "menu" href = "Libraries.html">Advanced: Libraries</a>
+      <a class = "menu" href = "Functions.html"> Advanced: Functions </a>
+      <a class = "menu" href = "PWM.html"> Advanced: PWM </a>
+    </div>
+  </li>
+  <li class=  "dropdown">
+<a class = "menu" href=  "javascript:void(0)" class="dropbtn">Component Guides</a>
+<div class= "dropdown-content">
+  <a class = "menu" href = "RGB LED.html">Multi-Colored LED</a>
+  <a class = "menu" href = "Servos.html">Servo Motors</a>
+  <a class = "menu" href = "PiezoBuzzer.html">Piezo Buzzer</a>
+</div>
+</li>
+<li class = "dropdown">
+  <a class = "menu" href=  "External Links.html" class="dropbtn"> External Links</a>
+</li>
+  </ul>
+</div>
+    <div class = "text">
+      <h2> Troubleshooting Guide </h2>
+      <p> After writing your code and attempting to upload it to your Arduino board, it might give you an error telling you it was not able to successfully upload the code. These errors are usually in red towards the bottom of the window. This guide will go over some of those errors and what might be the issue.</p>
+      <h3> Uploading Code </h3>
+      <p> You may get an error that says “Error uploading to board”. Before you try the following steps, click the “verify” button (the checkmark). If the code compiles with no errors then you have an issue related to uploading the code. If there are errors after clicking verify, you may have an issue with the code itself (skip to the next section).</p>
+      <p> If you get this error, you can try a few things:</p>
+      <ol class = "a">
+        <li> Select “Tools > board > Arduino Genuino Uno”  and “Tools > port > [select the port that has Arduino Genuino Uno in parentheses]” </li>
+        <div class = "imglink">
+          <a target = "_blank" href = "Images-Original/Board.jpg">
+            <img src = "Images/Board.jpg" height = "230px">
+          </a>
+        </div>
+        <div class = "imglink">
+          <a target = "_blank" href = "Images-Original/Port.jpg">
+            <img src = "Images/Port.jpg" height = "230px">
+          </a>
+        </div>
+        <br clear = "all">
+        <li> The USB cable might not be plugged in all the way. Push both ends in a bit. </li>
+        <li> Press the reset button, near the USB connector, then reupload the code. </li>
+        <li> If all else fails, try using a different USB port on the computer or a different cable. </li>
+      </ol>
+      <h3> Code Errors </h3>
+      <ol class = "a">
+        <li> <h4> Missing semicolon </h4> </li>
+        <div class = "imglink">
+          <a target = "_blank" href = "Images-Original/SemicolonError.jpg">
+            <img src = "Images/SemicolonError.jpg" height = "230px">
+          </a>
+        </div>
+        <br clear = "all">
+        <p> You might get the error “expected ‘;’ before [function]”. With this error, you forgot a semicolon after a function somewhere in your code. Go to the line above the one highlighted, then look for a function without a semicolon after it. In the example above, notice that the “delay” function does not have a semicolon after it. Adding a semicolon (making it delay(1000);) will fix this issue). </p>
+        <li><h4> Missing a bracket or parenthesis somewhere </h4></li>
+        <div class = "imglink">
+          <a target = "_blank" href = "Images-Original/BracketError.jpg">
+            <img src = "Images/BracketError.jpg" height = "230px">
+          </a>
+        </div>
+        <br clear = "all">
+        <p> Some errors (for example, “expected ‘}’ at the end of input”) indicate that you forgot a bracket (‘{‘ or ‘}’) or parenthesis somewhere in your code. Remember, you need an opening bracket at the beginning of void setup and void loop and a closing bracket at the end. In the example above, notice that there is no closing bracket at the end to indicate the end of void loop. Adding a bracket ‘}’ would fix the error.</p>
+        <li><h4> Mispelling words </h4></li>
+        <p> You may get an error that says “not declared in this scope”. If this is the case, you probably spelled something incorrectly. Check the highlighted text to make sure you didn’t make a spelling error. If a variable is highlighted, ensure that you spelled it the way you want when you declared it. </p>
+      </ol>
+      <h3> Circuit Issues </h3>
+      <p> If your code uploads with no errors, but the electronics are not doing what you want them to do, you might have an issue with circuitry. Try the following: </p>
+      <ol class = "a">
+        <li><h4> Wires aren't lined up right </h4></li>
+        <div class = "imglink">
+          <a target = "_blank" href = "Images-Original/CircuitError.jpg">
+            <img src = "Images/CircuitError.jpg" height = "300px">
+          </a>
+        </div>
+        <br clear = "all">
+        <p> Sometimes, the circuit isn’t working because wires aren’t lined up properly. Remember, if you want two components/wires to be electrically connected, they need to be in the same row (electricity runs the other way on the positive/negative rails). In the example above, the resistor is not in the same row as the short end of the LED; it is in the row next to it. Moving that end of the resistor to the same row as the LED will  complete the circuit and make it work how it is supposed to. </p>
+        <li><h4> LED in the wrong direction </h4></li>
+        <p> LEDs have specific positive and negative ends. The positive end is the longer side and the negative end is the shorter side (it is also flat along the rim). Ensure that the negative end is connected to GND and the longer end is connected to a digital pin or to 5V. You may have to flip the LED around. </p>
+        <li><h4> Bad jumper cables </h4></li>
+        <p> Sometimes, jumper cables break and are no longer able to conduct electricity properly. Try switching out all of the wires for new ones. If you are working on lesson 2 and you see only one value in the serial monitor (only 0 or only 1023), <i>this is your issue!!</i> </p>
+        <li><h4> Bad components </h4></li>
+        <p> Sometimes components get damaged either from wear and tear or from abuse (i.e. not using a resistor). If all else fails, try switching out the component itself with a new one. </p>
+      </ol>
+      <p> If you need more help figuring out why your code isn’t working, ask your advisor or your mentor. </p>
+    </div>
+  </body>
+</html>
