@@ -131,8 +131,8 @@ while(digitalRead(buttonPin) == HIGH){
   Fan.set(OFF);
 }
 </pre></code>
-      <p>CHALLENGE: Write a code that will blink an led 5 times then stop. Put this code in void setup() so that it only runs once. <br>
-      Hint: you will need to use a variable to do this.</p>
+      <p>CHALLENGE: Write a code that will blink an led 5 times then stop.</p>
+<p>Hint: You will need to use a variable to do this (Make sure the variable is above void setup or else it might not behave the way you want it to).</p>
       <h3>Advanced Control Structures</h3>
       <h4> else if </h4>
       <p>You can use an else if statement after an if statement in the following way:</p>
@@ -191,7 +191,7 @@ for(int i = 0; i < 5; i++){
   myServo.write(0); //Servo rotates back and forth 5 times
 }
 </pre></code>
-      <p>CHALLENGE: Try to blink an LED 5 times again, this time using a for loop instead of a while loop. Remember to put the code in setup instead of loop.</p>
+      <p>CHALLENGE: Try to blink an LED 5 times again, this time using a for loop instead of a while loop. This time, put the code in void setup instead of void loop so that it only runs one time.</p>
     </div>
   </body>
 </html>
