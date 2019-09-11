@@ -54,8 +54,42 @@
   <h3> Circuit </h3>
   <p>The LCD screen uses 4 pins for transferring data from the Arduino to the LCD. These are the pins labelled D84, D85, D86, and D87. Connect these pins to digital pins 5, 4, 3, and 2 on the Arduino like this:
   </p>
-  <p>Images</p>
+  
+<div class = "imglink">
+      <a target = "_blank" href = "Images-Original/LCDStep1Digital.jpg">
+        <img src = "Images/LCDStep1Digital.jpg" height = "230px">
+      </a>
+    </div>
+  <br clear = all>
   <p> The two pins labelled “LED” are for the backlight in the LCD. The backlight is just an LED, so you wire it just like a regular LED: one pin goes to the ground rail (with a 330 ohm resistor), the other goes to the 5V rail.</P>
-</div>
+<div class = "imglink">
+      <a target = "_blank" href = "Images-Original/LCDStep2Digital.jpg">
+        <img src = "Images/LCDStep2Digital.jpg" height = "230px">
+      </a>
+    </div>
+  <br clear = all>
+  <p> Now you will need to wire a potentiometer (a knob) to the breadboard. The potentiometer is for changing the brightness of the backlight on the LCD. Instead of connecting the middle pin on the potentiometer to an analog pin on the Arduino, this time connect it to the V0 pin on the LCD. Connect the two sides of the potentiometer to the positive and negative rails like usual.</p>
+  <div class = "imglink">
+      <a target = "_blank" href = "Images-Original/LCDStep3Digital.jpg">
+        <img src = "Images/LCDStep3Digital.jpg" height = "230px">
+      </a>
+    </div>
+  <br clear = all>
+  <p>Now connect the E pin to pin 11 on the Arduino, the RS pin to pin 12 on the Arduino, and the RW pin to the GND pin on the Arduino. Don’t worry too much about what these pins are for right now.</p>
+   <div class = "imglink">
+      <a target = "_blank" href = "Images-Original/LCDStep4Digital.jpg">
+        <img src = "Images/LCDStep4Digital.jpg" height = "230px">
+      </a>
+    </div>
+  <br clear = all>
+  <P>And of course, connect the VCC pin to the positive rail and the GND pin to the negative rail, then connect a wire from 5V on the Arduino to the positive rail and from GND on the arduino to the negative rail.</p>
+   <div class = "imglink">
+      <a target = "_blank" href = "Images-Original/LCDStep5Digital.jpg">
+        <img src = "Images/LCDStep5Digital.jpg" height = "230px">
+      </a>
+    </div>
+  <br clear = all>
+  <p>
+  </div>
 </body>
 </html>
