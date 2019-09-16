@@ -92,10 +92,24 @@
   <p>And then you’re done! Phew!! Now time for the code!</p>
   <h3> Code: The LiquidCrystal library</h3>
 <p>Before you can start coding the LCD at all, you have to include the library with an include statement:</p>
-  <code class= "txt"> #include &lt; LiquidCrystal.h &gt; </code>
-  
-
+  <code class= "txt"> #include &lt;LiquidCrystal.h&gt; </code>
+  <p>Right after the include statement, you will need to begin the LCD object like so:</P>
+ <code class= "txt">	LiquidCrystal lcd(12,11,5,4,3,2); <code>
+   <p> The numbers are all of the pins on the Arduino that we used when we created the circuit. If you change any of the pins, change these numbers as well. Now we can begin the code within setup and loop. </p>
+   <p>In void setup, you will need to tell the Arduino how many rows and columns of letters you want to be displayed. The maximum is usually 16 columns and 2 rows so this is what we will do. This is accomplished using the lcd.begin function: </p>
+    <code class= "txt">		lcd.begin(16,2);<Code>
+      <p> If you want to actually write something to your LCD, you will need to use the print function like this:</p>
+        <code class= "txt">		lcd.print("MESA Rocks!!"); <code>
+          <p>What if you want to print at a different location than the first row and first column? This is what the setcursor function is for. It moves the location on the LCD where the print function will print the letters. For example,</p>
+           <code class= "txt">		lcd.setCursor(0,1); <code>
+             <p>will start printing at column 0 (the first column), row 1 (the second column).</p>
+             <p>Lastly, what if you want to clear everything off of the LCD? Then you use the clear function:</p>
+               <code class= "txt">		lcd.clear(); <code>
+                 <p>This will clear all of the words off of the screen and reset the cursor location to row 0 column 0 (first row first column).</p>
     <iframe src=https://create.arduino.cc/editor/Yarelitr/6ef51caf-c084-432b-b233-7fc8b4a981ec/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-  </div>
+ <p> You can access this project on tinkercad here: </p>
+       <iframe width="725" height="453" src="https://www.tinkercad.com/embed/547ESC93jQ2?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+ </div>
+                 
 </body>
 </html>
