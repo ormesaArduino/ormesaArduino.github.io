@@ -9,6 +9,7 @@
   src: url(LiberataBook.otf);
 }
 
+
 html{
   background-color: #fffff0;
 }
@@ -252,5 +253,8 @@ div.link a{
   position: relative;
   margin-top: 10px;
 }
-
+@media screen and (max-width: 600px) {
+  .dropdown {
+    display: none;
+  }
 }
